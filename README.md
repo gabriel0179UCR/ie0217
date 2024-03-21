@@ -14,3 +14,4 @@ Este repositorio será utilizado para el curso IE0217 - Estructuras Abstractas d
 |---|---|
 | Previo1 | Archivos Markdown |
 | Previo2 | C++ Parte 1 |
+| Previo3 | C++ Parte 2 |
