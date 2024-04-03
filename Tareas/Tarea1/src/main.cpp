@@ -43,6 +43,8 @@ int main() {
     std::cout << "Ingrese su opcion: ";
     std::cin >> opcion;
 
+    ahorcado_game.max_attempts = 7;
+
     switch (opcion) {
         case DIFFICULTY:
             ahorcado_game.max_attempts = ChooseGameDifficulty();
