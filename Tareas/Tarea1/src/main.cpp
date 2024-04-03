@@ -15,10 +15,10 @@ enum Opciones {
 };
 
 // Declaracion de las palabras
-std::string dictionary_words[3] = {"Test", "Test2", "Test3"};
+std::string dictionary_words[3] = {"Estructuras", "Ingenieria", "Programacion"};
 
 
-
+// Funcion principal
 int main() {
 
     AhorcadoGame ahorcado_game;
@@ -30,7 +30,7 @@ int main() {
 
     int dictionary_size = sizeof(dictionary_words) / sizeof(dictionary_words[0]);
 
-    // Menu
+    // Loop del menu para acceder a todas las opciones
     while(!exit_game){
         std::cout << "///// Ahorcado /////" << std::endl;
     
@@ -43,6 +43,7 @@ int main() {
         std::cout << "Ingrese su opcion: ";
         std::cin >> opcion;
 
+        // Se utiliza un switch para determinar la opcion seleccionada por el usuario
         switch (opcion) {
             case DIFFICULTY:
                 ahorcado_game.max_attempts = ChooseGameDifficulty();
@@ -60,7 +61,7 @@ int main() {
             case SHOW:
                 SeeWords(dictionary_words, dictionary_size);
                 break;
-            case EXIT: // Listo
+            case EXIT:
                 exit_game = ExitGame();
                 break;
         };
