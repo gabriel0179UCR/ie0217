@@ -57,9 +57,8 @@ void StartGame(AhorcadoGame ahorcado_game){
         };
 
         if(ahorcado_game.word==ahorcado_game.actual_word){
-            std::cout << "La palabra es " <<  ahorcado_game.word << std::endl;
             std::cout << "FELICIDADES" << std::endl;
-            std::cout << "GAME OVER";
+            std::cout << "La palabra es " <<  ahorcado_game.word << std::endl;
             break;
         };
 
@@ -83,6 +82,8 @@ void SeeWords(std::string dictionary[], int size){
     }
 }
 
-void ExitGame(){
+bool ExitGame(){
     std::cout << "Saliendo del programa" << std::endl;
+
+    return true;
 }

@@ -9,6 +9,6 @@ int ChooseGameDifficulty();
 void StartGame(AhorcadoGame ahorcado_game);
 void AddWords();
 void SeeWords(std::string dictionary[], int size);
-void ExitGame();
+bool ExitGame();
 
 #endif // MENUFUNCTIONS_HPP
