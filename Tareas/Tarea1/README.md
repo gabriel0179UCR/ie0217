@@ -81,17 +81,51 @@ Nota: El flujo de trabajo básico en Git no toma en consideración el trabajo o 
 
 ### 10. Defina qué significa inicializar y declarar una variable.
 Inicializar una variable es asignarle un valor al mismo. Ej:
-```
+```c++
 variable = 3;
 ```
 Declarar una variable es definir el tipo de dato que va a almacenar. Ej:
-```
+```c++
 int variable;
 ```
 
 ### 11. ¿Qué es la sobrecarga de funciones en C++ y cuáles son sus beneficios?
+La sobrecarga de funciones es la carácterística en C++ de definir dos funciones con el mismo nombre, pero con distinto comportamiento. Esto se realiza a partir de los parámetros de las funciones y tipo de función que deben ser distintos. Ej:
+```c++
+int function(int v1) {
+    // Function body
+}
+float function(float v2) {
+    // Function body
+}
+```
+Entre los beneficiones se realta la reutilización de código y la felxibilidad de las funciones para adaptarse a diferentes tipos de datos.
+
+
 ### 12. ¿Qué es un puntero y cómo se utiliza? Explique con un ejemplo de la vida real.
+Un puntero es una variable que almacena la dirección de memoria de otra variable. Ej:
+```c++
+int var = 5;
+int* pointvar;
+
+pointvar = &var;
+
+// pointvar apunta a la direccion en memoria de la variable var
+// Para acceder al valor de la direccion en memoria almacenada se utiliza *
+// *pointvar posee el valor de 5
+```
+Se puede realizar una analogía de puntero con un restaurante. Cuando una mesa realiza un pedido, el mesero anota el número de mesa (dirección a la que apunta el puntero) con las órdenes de los comensales (valor almacenado en la dirección que apunta el puntero). Los concineros mediante el puntero va a visualizar las ordenes y separarlo conforme a la dirección en memoria, para que cuando el mesero tenga que entregar la comida, visualiza el puntero y no las órdenes.
+
 ### 13. ¿Qué es un branch (rama) en Git y cómo se utiliza?
+Un branch es una copia secundaria del repositorio, la copia principal se llama main. En un branch se realizan cambios y permite separar por subproyectos en el manejo del desarrollo software.
+Entre las funcionalidades principales se encuentra:
+| Comando | Propósito y uso |
+| - | - |
+| git branch   | Se crea un nuevo branch.   |
+| git checkout | Se cambia al nuevo branch. |
+| git merge    | Se combinan dos branch.    |
+
+
 ### 14. ¿Cuál es la principal diferencia entre un bucle do-while y un bucle while?
 ### 15. Explique por qué es útil y común dividir el código en archivos .hpp, .cpp y main.cpp en C++. Describa el propóito específico de cada tipo de archivo.
 ### 16. ¿Dónde y cómo se guardan las variables que se crean en C++? Explique la diferencia entre el almacenamiento de variables locales y globales.
