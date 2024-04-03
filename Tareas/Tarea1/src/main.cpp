@@ -1,5 +1,6 @@
 #include <iostream>
 #include "MenuFunctions.hpp"
+#include "Game.hpp"
 
 // Declaracion de las opciones de la agenda
 enum Opciones {
@@ -12,7 +13,7 @@ enum Opciones {
 
 int main() {
 
-
+    AhorcadoGame ahorcado_game;
     int opcion;
 
     // Menu
@@ -29,7 +30,7 @@ int main() {
 
     switch (opcion) {
         case DIFFICULTY:
-            ChooseGameDifficulty();
+            ahorcado_game.max_attempts = ChooseGameDifficulty();
             break;
         case START:
             StartGame();
@@ -40,7 +41,7 @@ int main() {
         case SHOW:
             SeeWords();
             break;
-        case EXIT:
+        case EXIT: // Listo
             ExitGame();
             break;
     };

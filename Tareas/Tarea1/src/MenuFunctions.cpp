@@ -1,7 +1,18 @@
 #include "MenuFunctions.hpp"
 
-void ChooseGameDifficulty(){
+int ChooseGameDifficulty(){
     std::cout << "Dificultad del juego" << std::endl;
+
+    int game_difficulty;
+
+    std::cout << std::endl << "Dificultades" << std::endl;
+    std::cout << "1. Facil: 7 intentos permitidos" << std::endl;
+    std::cout << "2. Medio: 5 intentos permitidos" << std::endl;
+    std::cout << "3. Dificil: 3 intentos permitidos" << std::endl;
+    std::cout << "Seleccione la dificultad: ";
+    std::cin >> game_difficulty;
+
+    return game_difficulty;
 }
 
 void StartGame(){
@@ -17,5 +28,5 @@ void SeeWords(){
 }
 
 void ExitGame(){
-    std::cout << "Salir del programa" << std::endl;
+    std::cout << "Saliendo del programa" << std::endl;
 }

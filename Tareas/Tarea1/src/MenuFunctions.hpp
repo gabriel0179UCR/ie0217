@@ -2,7 +2,7 @@
 #define MENUFUNCTIONS_HPP
 #include <iostream>
 // Definicion de los encabezados de cada una de las funciones
-void ChooseGameDifficulty();
+int ChooseGameDifficulty();
 void StartGame();
 void AddWords();
 void SeeWords();
