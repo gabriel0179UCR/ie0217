@@ -2,7 +2,7 @@
 #include "MenuFunctions.hpp"
 #include "Game.hpp"
 
-// Declaracion de las opciones de la agenda
+// Declaracion de las opciones del menu
 enum Opciones {
     DIFFICULTY = 1,
     START,
@@ -11,10 +11,15 @@ enum Opciones {
     EXIT
 };
 
+// Declaracion de las palabras
+std::string dictionary_words[3] = {"Test", "Test2", "Test3"};
+
 int main() {
 
     AhorcadoGame ahorcado_game;
     int opcion;
+
+    int dictionary_size = sizeof(dictionary_words) / sizeof(dictionary_words[0]);
 
     // Menu
     std::cout << "///// Ahorcado /////" << std::endl;
@@ -39,7 +44,7 @@ int main() {
             AddWords();
             break;
         case SHOW:
-            SeeWords();
+            SeeWords(dictionary_words, dictionary_size);
             break;
         case EXIT: // Listo
             ExitGame();

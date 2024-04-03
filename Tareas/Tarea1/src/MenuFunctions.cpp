@@ -23,8 +23,11 @@ void AddWords(){
     std::cout << "Agregando palabras" << std::endl;
 }
 
-void SeeWords(){
-    std::cout << "Ver diccionario" << std::endl;
+void SeeWords(std::string dictionary[], int size){
+    std::cout << std::endl << "Palabras en el diccionario: " << std::endl;
+    for (int i = 0; i < size; ++i) {
+        std::cout << i << ". " << dictionary[i] << std::endl;
+    }
 }
 
 void ExitGame(){
