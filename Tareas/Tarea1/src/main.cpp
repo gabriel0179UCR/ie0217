@@ -1,6 +1,9 @@
 #include <iostream>
+#include <list>
+#include <cstdlib>
 #include "MenuFunctions.hpp"
 #include "Game.hpp"
+#include <time.h>
 
 // Declaracion de las opciones del menu
 enum Opciones {
@@ -14,10 +17,17 @@ enum Opciones {
 // Declaracion de las palabras
 std::string dictionary_words[3] = {"Test", "Test2", "Test3"};
 
+//std::list<std::string> dictionary_words = {"Test", "Test2", "Test3"};
+
+
 int main() {
 
     AhorcadoGame ahorcado_game;
     int opcion;
+
+    //dictionary_words.push_back("Test");
+    //dictionary_words.push_back("Test2");
+    //dictionary_words.push_back("Test3");
 
     int dictionary_size = sizeof(dictionary_words) / sizeof(dictionary_words[0]);
 
@@ -38,7 +48,11 @@ int main() {
             ahorcado_game.max_attempts = ChooseGameDifficulty();
             break;
         case START:
-            StartGame();
+            srand(time(0));
+            ahorcado_game.word = dictionary_words[rand()%dictionary_size];
+            ahorcado_game.actual_word.assign(ahorcado_game.word.length(), '_');
+            ahorcado_game.actual_attempts = 0;
+            StartGame(ahorcado_game);
             break;
         case ADD:
             AddWords();

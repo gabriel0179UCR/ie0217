@@ -15,8 +15,8 @@ int ChooseGameDifficulty(){
     return game_difficulty;
 }
 
-void StartGame(){
-    std::cout << "Inicio del juego" << std::endl;
+void StartGame(AhorcadoGame ahorcado_game){
+    std::cout << "Inicio del juego" << ahorcado_game.word << std::endl;
 }
 
 void AddWords(){
