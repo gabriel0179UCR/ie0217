@@ -44,12 +44,27 @@ Para resolver un conflicto de fusión debido a archivos eliminados, siga las sig
 4. Abra un editor de texto y dirígase al archivo quie tiene conflictos de combinación.
 5. Mantenga el archivo eliminado o elimine el archivo.
 
+Referencia: GitHub, https://docs.github.com/es/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line
 
 ### 5. ¿Qué es un archivo .gitignore y para qué se utiliza?
+Un archivo .gitignore es un tipo de archivo utilizado en git para ignorar los cambios en archivos con extensiones específicas. Por ejemplo, en el archivo .gitignore se puede incluir la extensión .exe, entonces al crear o cambiar un archivo .exe, git no lo va a tomar en consideración como un cambio necesario para enviar al repositorio remoto.
+
 ### 6. ¿Qué es una solicitud de extracción (pull request) en GitHub y cómo se utiliza?
+Un pull request, a diferencia de un pit push, es una solicitud de cambios sin la necesidad de modificar una rama del proyecto. Esta solucitud normalmente se envía a revisión antes de su incorporación.
+
+Para utilziar un pull reques se crea una rama secundaria a la principal y se realiza un commit. Seguidamente en la página de github, se selecciona la opción de pull request al commit realizado y se asignan los supervisores de los cambios.
+
 ### 7. ¿Cuáles son las diferencias fundamentales entre un lenguaje de programación compilado y uno interpretado?
-### Proporcione ejemplos de situaciones en las que sería más óptimo utilizar un lenguaje
-### compilado y otras en las que sería más adecuado un lenguaje interpretado.
+- Proporcione ejemplos de situaciones en las que sería más óptimo utilizar un lenguaje compilado y otras en las que sería más adecuado un lenguaje interpretado.
+
+El lenguaje de programación compilado convierte todo el código fuente en código ejecutable antes de ejecutar el programa. Por otro lado, un lenguaje interpretado procesa el código fuente línea por línea mientras ejecuta el programa.
+
+Debido a que el lenguaje compilado genera el ejecutable antes de ejecutar el programa, es más rápido que el lenguaje interpretado.
+
+
+En el desarrollo web se busca mucho la eficiencia en tiempo de ejecución del backend de una página web, por lo tanto es comunmente utilizado el lenguaje compilado.
+En el desarrollo de programas de automatización de tareas (como lo es el llenado masivo de checklist) se requiere de gran flexibilidad de programación, por lo tanto es comunmente utilizado el lenguaje interpretado.
+
 ### 8. Explique qué es un linker en el contexto de un lenguaje de programación compilado.
 ### ¿Cuál es su función principal y por qué es esencial en el proceso de compilación?
 ### 9. Describa el flujo de trabajo básico en Git para agregar cambios a un repositorio.
