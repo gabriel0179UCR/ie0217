@@ -1,6 +1,6 @@
 # Programas realizados para el Previo 4
 
-## Clase 3: C++ Clases y Objetos
+## Clase 4: C++ Clases y Objetos
 
 Todos los archivos se compilar y ejecutar de la siguiente forma:
 
