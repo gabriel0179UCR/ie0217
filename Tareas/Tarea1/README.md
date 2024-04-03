@@ -129,10 +129,54 @@ Entre las funcionalidades principales se encuentra:
 ### 14. ¿Cuál es la principal diferencia entre un bucle do-while y un bucle while?
 Un bucle while inicia al cumplir una condición especificada (mínimo realiza cero interaciones). En cambio, un bucle do-while realiza una iteración y luego revisa si se cumple la condición especificada para realizar otra iteración (mínimo realiza una iteración).
 
-### 15. Explique por qué es útil y común dividir el código en archivos .hpp, .cpp y main.cpp en C++. Describa el propóito específico de cada tipo de archivo.
-### 16. ¿Dónde y cómo se guardan las variables que se crean en C++? Explique la diferencia entre el almacenamiento de variables locales y globales.
-### 17. ¿Cuál es la diferencia entre pasar parámetros por valor, por referencia y por puntero?
+### 15. Explique por qué es útil y común dividir el código en archivos .hpp, .cpp y main.cpp en C++. Describa el protótipo específico de cada tipo de archivo.
+Dividir el código entre los archivos .hpp, .cpp y main.cpp permite una mejor distribución y organización de las dependencias, librerías y funciones.
 
+Prototipos:
+
+```c++
+// .hpp
+#ifndef FUNCIONES_HPP
+#define FUNCIONES_HPP
+
+// Definicion de los encabezados de cada una de las funciones
+
+#endif // FUNCIONES_HPP
+```
+
+```c++
+// .cpp
+void funct1(const var1) {
+    // Cuerpo de funcion
+}
+void funct2(const var2) {
+    // Cuerpo de funcion
+}
+```
+```c++
+// main.cpp
+
+// Includes
+
+int main() {
+    // Cuerpo
+    return 0;
+}
+```
+
+### 16. ¿Dónde y cómo se guardan las variables que se crean en C++? Explique la diferencia entre el almacenamiento de variables locales y globales.
+Las variables en C++ se pueden guardar de forma local o global, dependiendo de la función necesaria. La variables locales existen solo dentro de un ámbito, ya se una función, una clase, entre otros. Por otro lado, las variables globales existen en todo el código y se pueden utilizar indiferentemente de dónde se realice el llamado.
+```c++
+int var1 = 10; // Variable global
+int main() {
+    int var2 = 5; // Variable local
+}
+```
+
+### 17. ¿Cuál es la diferencia entre pasar parámetros por valor, por referencia y por puntero?
+El parámetro por valor crean una copia de la variable y no puede modificar la variable original.
+El parámetro por referencia crea un alias a la variable y se puede modificar la variable original mediante el alias.
+El parámetro por puntero pasa la dirección en memoria de la variable y se puede modificar la variable original meidante la dirección.
 
 ### 18. Cuando se usa un puntero para apuntar a un arreglo en C++, ¿a qué valor o dirección apunta inicialmente? Describa cómo sería la forma de acceder a todos los datos de ese arreglo mediante el puntero.
 Si el arreglo está inicializado, el puntero apunta inicialmente a la dirección del primer valor del arreglo. Para acceder a todos los datos del arreglo mediante el puntero se puede realizar un recorrido donde el puntero suma 1 por cada entrada del arreglo. Ej:
