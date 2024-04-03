@@ -127,6 +127,8 @@ Entre las funcionalidades principales se encuentra:
 
 
 ### 14. ¿Cuál es la principal diferencia entre un bucle do-while y un bucle while?
+Un bucle while inicia al cumplir una condición especificada (mínimo realiza cero interaciones). En cambio, un bucle do-while realiza una iteración y luego revisa si se cumple la condición especificada para realizar otra iteración (mínimo realiza una iteración).
+
 ### 15. Explique por qué es útil y común dividir el código en archivos .hpp, .cpp y main.cpp en C++. Describa el propóito específico de cada tipo de archivo.
 ### 16. ¿Dónde y cómo se guardan las variables que se crean en C++? Explique la diferencia entre el almacenamiento de variables locales y globales.
 ### 17. ¿Cuál es la diferencia entre pasar parámetros por valor, por referencia y por puntero?
@@ -134,5 +136,21 @@ Entre las funcionalidades principales se encuentra:
 ### 19. Explique para qué son empleados los punteros dobles en C++. Proporcione ejemplos de situaciones en las que los punteros dobles son necesarios o beneficiosos.
 ### 20. ¿Para qué se utiliza la directiva #ifndef?
 ### 21. ¿Qué es el puntero this en C++?
+El puntero this es una variable de una estructura o una unión que hace referencia al objeto de la clase dentro de una clase. Este permite acceder a sus atributos y métodos dentro de la clase.
+
 ### 22. ¿Cuál es la diferencia entre un arreglo y una lista en C++?
+Un arreglo es una estructura de datos estática que no se puede modificar una vez se haya creado. Ej:
+```c++
+int var[3] = {1, 2, 3};
+```
+Una lista es una estructura de datos dinámica que se puede modificar una vez se haya creado. Ej:
+```c++
+list<int> var;
+var.push_back(1);
+```
+
 ### 23. ¿Investigue qué es un memory leak?
+
+Un memory leak es la memoria que se utilizó y se dejó de utilizar, pero no fue liberada. Estos espacios en memoria no se pueden liberar porque el programa ya no contiene los punteros a estos espacios. La principal causa de un memory leak es el espacio en memoria no liberado de las variables estáticas de forma manual.
+
+Referencia: A.Hicken, Finding a Memory Leak in C or C++, https://www.parasoft.com/blog/finding-memory-leaks-in-c-or-c/#:~:text=In%20computer%20science%2C%20a%20memory,accessed%20by%20the%20running%20code.
