@@ -67,8 +67,28 @@ En el desarrollo de programas de automatización de tareas (como lo es el llenad
 
 ### 8. Explique qué es un linker en el contexto de un lenguaje de programación compilado.
 ### ¿Cuál es su función principal y por qué es esencial en el proceso de compilación?
+Un linker es la herramienta encargada de combinar todos los archivos en un único programa ejecutable. La principal función es la de tomar los programas, bibliotecas y referencias y combinarlas, modularlas y optimizar en un archivo ejecutable.
+
+
 ### 9. Describa el flujo de trabajo básico en Git para agregar cambios a un repositorio.
+1. Se descarga una copia del repositorio remoto en un repositorio local (git clone). 
+2. Se crean o se editan archivos. 
+3. Se envían los cambios enviar del Working Directory al Staging/Index (git add).
+4. Se guardan los cambios del Stagin/Index al repositorio local (git commit).
+5. Se guardan los cambios del repositorio local en el repositorio remoto (git push).
+
+Nota: El flujo de trabajo básico en Git no toma en consideración el trabajo o cambios realizados en un branch distinta a la main.
+
 ### 10. Defina qué significa inicializar y declarar una variable.
+Inicializar una variable es asignarle un valor al mismo. Ej:
+```
+variable = 3;
+```
+Declarar una variable es definir el tipo de dato que va a almacenar. Ej:
+```
+int variable;
+```
+
 ### 11. ¿Qué es la sobrecarga de funciones en C++ y cuáles son sus beneficios?
 ### 12. ¿Qué es un puntero y cómo se utiliza? Explique con un ejemplo de la vida real.
 ### 13. ¿Qué es un branch (rama) en Git y cómo se utiliza?
