@@ -1,5 +1,6 @@
 #ifndef MENUFUNCTIONS_HPP
 #define MENUFUNCTIONS_HPP
+#include <iostream>
 // Definicion de los encabezados de cada una de las funciones
 void ChooseGameDifficulty();
 void StartGame();

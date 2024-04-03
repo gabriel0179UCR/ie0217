@@ -1,12 +1,48 @@
 #include <iostream>
 #include "MenuFunctions.hpp"
 
-int main() {
-    ChooseGameDifficulty();
-    StartGame();
-    AddWords();
-    SeeWords();
-    ExitGame();
+// Declaracion de las opciones de la agenda
+enum Opciones {
+    DIFFICULTY = 1,
+    START,
+    ADD,
+    SHOW,
+    EXIT
+};
 
+int main() {
+
+
+    int opcion;
+
+    // Menu
+    std::cout << "///// Ahorcado /////" << std::endl;
+
+    std::cout << "1. Elegir la dificultad del juego" << std::endl;
+    std::cout << "2. Iniciar el juego" << std::endl;
+    std::cout << "3. Agregar palabras al diccionario de palabras" << std::endl;
+    std::cout << "4. Ver diccionario de palabras" << std::endl;
+    std::cout << "5. Salir del programa" << std::endl;
+    
+    std::cout << "Ingrese su opcion: ";
+    std::cin >> opcion;
+
+    switch (opcion) {
+        case DIFFICULTY:
+            ChooseGameDifficulty();
+            break;
+        case START:
+            StartGame();
+            break;
+        case ADD:
+            AddWords();
+            break;
+        case SHOW:
+            SeeWords();
+            break;
+        case EXIT:
+            ExitGame();
+            break;
+    };
     return 0;
 }
