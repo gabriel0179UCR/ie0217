@@ -132,9 +132,28 @@ Un bucle while inicia al cumplir una condición especificada (mínimo realiza ce
 ### 15. Explique por qué es útil y común dividir el código en archivos .hpp, .cpp y main.cpp en C++. Describa el propóito específico de cada tipo de archivo.
 ### 16. ¿Dónde y cómo se guardan las variables que se crean en C++? Explique la diferencia entre el almacenamiento de variables locales y globales.
 ### 17. ¿Cuál es la diferencia entre pasar parámetros por valor, por referencia y por puntero?
+
+
 ### 18. Cuando se usa un puntero para apuntar a un arreglo en C++, ¿a qué valor o dirección apunta inicialmente? Describa cómo sería la forma de acceder a todos los datos de ese arreglo mediante el puntero.
+Si el arreglo está inicializado, el puntero apunta inicialmente a la dirección del primer valor del arreglo. Para acceder a todos los datos del arreglo mediante el puntero se puede realizar un recorrido donde el puntero suma 1 por cada entrada del arreglo. Ej:
+
+```c++
+int var1[] = {1, 2, 3};
+int* puntvar1 = var1;
+// puntvar1 apunta a la dirección en memoria del valor 1. *puntvar1 = 1
+puntvar1++;
+// puntvar1 apunta a la dirección en memoria del valor 2. *puntvar1 = 2
+puntvar1++;
+// puntvar1 apunta a la dirección en memoria del valor 3. *puntvar1 = 3
+```
+
+
 ### 19. Explique para qué son empleados los punteros dobles en C++. Proporcione ejemplos de situaciones en las que los punteros dobles son necesarios o beneficiosos.
+Los punteros dobles son empleados para almacenar la dirección en memoria de otro puntero. Los punteros dobles son necesarios al crear matrices dinámicas porque se requiere de guardar la dirección del primer elemento de la matriz. También son utilizados para pasar matrices como argumentos de funciones.
+
 ### 20. ¿Para qué se utiliza la directiva #ifndef?
+La directiva #ifndef se utiliza para comprobar si no se ha definido un macro. Si un macro no está definido, se compilan las líneas que siguen de la directiva.
+
 ### 21. ¿Qué es el puntero this en C++?
 El puntero this es una variable de una estructura o una unión que hace referencia al objeto de la clase dentro de una clase. Este permite acceder a sus atributos y métodos dentro de la clase.
 
