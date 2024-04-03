@@ -1,11 +1,50 @@
 
 # Parte Teórica
 
-## 1. ¿Cuál es la principal diferencia entre C y C++?
+### 1. ¿Cuál es la principal diferencia entre C y C++?
+A diferencia de C, C++ es un lenguaje de programación orientado a objectos. 
+C++ utiliza las características de C y lo adapta para el manejo programado de objetos.
+
 
 ### 2. Explique el propósito y el uso de los siguientes comandos de Git: git init, git add, git commit, git push, git pull, git clone, git branch, git merge.
+| Comando | Propósito y uso |
+| - | - |
+| git init   | Inicializar un repositorio nuevo.                                   |
+| git add    | Enviar los cambios del Working Directory al Staging/Index.          |
+| git commit | Guardar los cambios del Stagin/Index al Local Repository.           |
+| git push   | Guardar los cambios del Local Repository al Remote Repository.      |
+| git pull   | Descargar los cambios del Remote Repository al Local Repository.    |
+| git clone  | Descargar una copia del Remote Repository en un Local Repository.   |
+| git branch | Crear una nueva rama diferente a la rama principal del repositorio. |
+| git merge  | Combinar dos ramas.                                                 |
+
+
 ### 3. ¿Qué es Git y cuál es su propósito en el desarrollo de software?
+Git es un programa de control de versiones. Este programa permite el manejo eficiente y certero en el desarrollo 
+de software para mantener de forma ordenada las versiones y cambios realizados en el proyecto. Entre otros aspectos 
+generales, permite la solicitud de revisiones, revertir cambios y compartir código.
+
 ### 4. ¿Qué es un conflicto de fusión (merge conflict) en Git y cómo se resuelve?
+Un conflicto de fusión (merge conflict) ocurre cuando una persona edita una línea de código cuando otra persona está 
+editando el mismo archivo (líneas contrapuestas) o el archivo fue borrado.
+
+Para resolver un conflicto de fusión debido a cambios de líneas contrapuestos, siga las siguientes indicaciones:
+1. Abra Git Bash.
+2. Navegue en el repositorio de Git local que tiene el conflicto de fusión.
+3. Genera una lista de los archivos afectados por el conflicto de fusión.
+4. Abra un editor de texto y dirígase al archivo quie tiene conflictos de combinación.
+5. Busque el marcador de conflicto "<<<<<<< HEAD" para identificar el origen del conflicto. El marcador "=======" divide los cambios de la otra rama. El marcador ">>>>>>> BRANCH-NAME" indica el final de los cambios de la otra rama.
+6. Mantenga únicamente los cambios de su rama, los cambios de otras ramas o realizar un cambio nuevo y elimine los marcadores del punto 5.
+
+
+Para resolver un conflicto de fusión debido a archivos eliminados, siga las siguientes indicaciones:
+1. Abra Git Bash.
+2. Navegue en el repositorio de Git local que tiene el conflicto de fusión.
+3. Genera una lista de los archivos afectados por el conflicto de fusión.
+4. Abra un editor de texto y dirígase al archivo quie tiene conflictos de combinación.
+5. Mantenga el archivo eliminado o elimine el archivo.
+
+
 ### 5. ¿Qué es un archivo .gitignore y para qué se utiliza?
 ### 6. ¿Qué es una solicitud de extracción (pull request) en GitHub y cómo se utiliza?
 ### 7. ¿Cuáles son las diferencias fundamentales entre un lenguaje de programación compilado y uno interpretado?
