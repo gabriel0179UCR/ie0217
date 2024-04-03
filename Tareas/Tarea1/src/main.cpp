@@ -18,7 +18,7 @@ enum Opciones {
 std::string dictionary_words[3] = {"Estructuras", "Ingenieria", "Programacion"};
 
 
-// Funcion principal
+//! Funcion principal
 int main() {
 
     AhorcadoGame ahorcado_game;
@@ -30,7 +30,7 @@ int main() {
 
     int dictionary_size = sizeof(dictionary_words) / sizeof(dictionary_words[0]);
 
-    // Loop del menu para acceder a todas las opciones
+    //! - Loop del menu para acceder a todas las opciones
     while(!exit_game){
         std::cout << "///// Ahorcado /////" << std::endl;
     

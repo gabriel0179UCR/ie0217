@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['un_20archivo_20gitignore_20y_20para_20que_20se_20utiliza_0',['5. Â¿Que es un archivo .gitignore y para que se utiliza?',['../index.html#autotoc_md7',1,'']]],
+  ['un_20arreglo_20y_20una_20lista_20en_20c_1',['22. Â¿Cual es la diferencia entre un arreglo y una lista en C++?',['../index.html#autotoc_md25',1,'']]],
+  ['un_20branch_20rama_20en_20git_20y_20como_20se_20utiliza_2',['13. Â¿Que es un branch (rama) en Git y como se utiliza?',['../index.html#autotoc_md16',1,'']]],
+  ['un_20bucle_20do_20while_20y_20un_20bucle_20while_3',['14. Â¿Cual es la principal diferencia entre un bucle do-while y un bucle while?',['../index.html#autotoc_md17',1,'']]],
+  ['un_20conflicto_20de_20fusion_20merge_20conflict_20en_20git_20y_20como_20se_20resuelve_4',['4. Â¿Que es un conflicto de fusion (merge conflict) en Git y como se resuelve?',['../index.html#autotoc_md6',1,'']]],
+  ['un_20lenguaje_20de_20programacion_20compilado_20y_20uno_20interpretado_5',['7. Â¿CuÃ¡les son las diferencias fundamentales entre un lenguaje de programacion compilado y uno interpretado?',['../index.html#autotoc_md9',1,'']]],
+  ['un_20linker_20en_20el_20contexto_20de_20un_20lenguaje_20de_20programacion_20compilado_6',['8. Explique que es un linker en el contexto de un lenguaje de programacion compilado.',['../index.html#autotoc_md10',1,'']]],
+  ['un_20memory_20leak_7',['23. Â¿Investigue que es un memory leak?',['../index.html#autotoc_md26',1,'']]],
+  ['un_20puntero_20para_20apuntar_20a_20un_20arreglo_20en_20c_20â¿a_20que_20valor_20o_20direccion_20apunta_20inicialmente_20describa_20cã³mo_20seria_20la_20forma_20de_20acceder_20a_20todos_20los_20datos_20de_20ese_20arreglo_20mediante_20el_20puntero_8',['18. Cuando se usa un puntero para apuntar a un arreglo en C++, Â¿a que valor o direccion apunta inicialmente? Describa cÃ³mo seria la forma de acceder a todos los datos de ese arreglo mediante el puntero.',['../index.html#autotoc_md21',1,'']]],
+  ['un_20puntero_20y_20como_20se_20utiliza_20explique_20con_20un_20ejemplo_20de_20la_20vida_20real_9',['12. Â¿Que es un puntero y como se utiliza? Explique con un ejemplo de la vida real.',['../index.html#autotoc_md15',1,'']]],
+  ['un_20repositorio_10',['9. Describa el flujo de trabajo basico en Git para agregar cambios a un repositorio.',['../index.html#autotoc_md12',1,'']]],
+  ['una_20lista_20en_20c_11',['22. Â¿Cual es la diferencia entre un arreglo y una lista en C++?',['../index.html#autotoc_md25',1,'']]],
+  ['una_20solicitud_20de_20extraccion_20pull_20request_20en_20github_20y_20como_20se_20utiliza_12',['6. Â¿Que es una solicitud de extraccion (pull request) en GitHub y como se utiliza?',['../index.html#autotoc_md8',1,'']]],
+  ['una_20variable_13',['10. Defina que significa inicializar y declarar una variable.',['../index.html#autotoc_md13',1,'']]],
+  ['uno_20interpretado_14',['7. Â¿CuÃ¡les son las diferencias fundamentales entre un lenguaje de programacion compilado y uno interpretado?',['../index.html#autotoc_md9',1,'']]],
+  ['usa_20un_20puntero_20para_20apuntar_20a_20un_20arreglo_20en_20c_20â¿a_20que_20valor_20o_20direccion_20apunta_20inicialmente_20describa_20cã³mo_20seria_20la_20forma_20de_20acceder_20a_20todos_20los_20datos_20de_20ese_20arreglo_20mediante_20el_20puntero_15',['18. Cuando se usa un puntero para apuntar a un arreglo en C++, Â¿a que valor o direccion apunta inicialmente? Describa cÃ³mo seria la forma de acceder a todos los datos de ese arreglo mediante el puntero.',['../index.html#autotoc_md21',1,'']]],
+  ['uso_20de_20los_20siguientes_20comandos_20de_20git_3a_20git_20init_20git_20add_20git_20commit_20git_20push_20git_20pull_20git_20clone_20git_20branch_20git_20merge_16',['2. Explique el proposito y el uso de los siguientes comandos de Git: git init, git add, git commit, git push, git pull, git clone, git branch, git merge.',['../index.html#autotoc_md4',1,'']]],
+  ['util_20y_20comun_20dividir_20el_20codigo_20en_20archivos_20hpp_20cpp_20y_20main_20cpp_20en_20c_20describa_20el_20prototipo_20especã­fico_20de_20cada_20tipo_20de_20archivo_17',['15. Explique por que es util y comun dividir el codigo en archivos .hpp, .cpp y main.cpp en C++. Describa el prototipo especÃ­fico de cada tipo de archivo.',['../index.html#autotoc_md18',1,'']]],
+  ['utiliza_18',['Utiliza',['../index.html#autotoc_md16',1,'13. Â¿Que es un branch (rama) en Git y como se utiliza?'],['../index.html#autotoc_md7',1,'5. Â¿Que es un archivo .gitignore y para que se utiliza?'],['../index.html#autotoc_md8',1,'6. Â¿Que es una solicitud de extraccion (pull request) en GitHub y como se utiliza?']]],
+  ['utiliza_20explique_20con_20un_20ejemplo_20de_20la_20vida_20real_19',['12. Â¿Que es un puntero y como se utiliza? Explique con un ejemplo de la vida real.',['../index.html#autotoc_md15',1,'']]],
+  ['utiliza_20la_20directiva_20ifndef_20',['20. Â¿Para que se utiliza la directiva #ifndef?',['../index.html#autotoc_md23',1,'']]]
+];

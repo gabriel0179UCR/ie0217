@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['la_20diferencia_20entre_20el_20almacenamiento_20de_20variables_20locales_20y_20globales_0',['16. Â¿Donde y como se guardan las variables que se crean en C++? Explique la diferencia entre el almacenamiento de variables locales y globales.',['../index.html#autotoc_md19',1,'']]],
+  ['la_20diferencia_20entre_20pasar_20parametros_20por_20valor_20por_20referencia_20y_20por_20puntero_1',['17. Â¿Cual es la diferencia entre pasar parametros por valor, por referencia y por puntero?',['../index.html#autotoc_md20',1,'']]],
+  ['la_20diferencia_20entre_20un_20arreglo_20y_20una_20lista_20en_20c_2',['22. Â¿Cual es la diferencia entre un arreglo y una lista en C++?',['../index.html#autotoc_md25',1,'']]],
+  ['la_20directiva_20ifndef_3',['20. Â¿Para que se utiliza la directiva #ifndef?',['../index.html#autotoc_md23',1,'']]],
+  ['la_20forma_20de_20acceder_20a_20todos_20los_20datos_20de_20ese_20arreglo_20mediante_20el_20puntero_4',['18. Cuando se usa un puntero para apuntar a un arreglo en C++, Â¿a que valor o direccion apunta inicialmente? Describa cÃ³mo seria la forma de acceder a todos los datos de ese arreglo mediante el puntero.',['../index.html#autotoc_md21',1,'']]],
+  ['la_20principal_20diferencia_20entre_20c_20y_20c_5',['1. Â¿Cual es la principal diferencia entre C y C++?',['../index.html#autotoc_md3',1,'']]],
+  ['la_20principal_20diferencia_20entre_20un_20bucle_20do_20while_20y_20un_20bucle_20while_6',['14. Â¿Cual es la principal diferencia entre un bucle do-while y un bucle while?',['../index.html#autotoc_md17',1,'']]],
+  ['la_20sobrecarga_20de_20funciones_20en_20c_20y_20cuales_20son_20sus_20beneficios_7',['11. Â¿Que es la sobrecarga de funciones en C++ y cuales son sus beneficios?',['../index.html#autotoc_md14',1,'']]],
+  ['la_20vida_20real_8',['12. Â¿Que es un puntero y como se utiliza? Explique con un ejemplo de la vida real.',['../index.html#autotoc_md15',1,'']]],
+  ['las_20diferencias_20fundamentales_20entre_20un_20lenguaje_20de_20programacion_20compilado_20y_20uno_20interpretado_9',['7. Â¿CuÃ¡les son las diferencias fundamentales entre un lenguaje de programacion compilado y uno interpretado?',['../index.html#autotoc_md9',1,'']]],
+  ['las_20que_20los_20punteros_20dobles_20son_20necesarios_20o_20beneficiosos_10',['19. Explique para que son empleados los punteros dobles en C++. Proporcione ejemplos de situaciones en las que los punteros dobles son necesarios o beneficiosos.',['../index.html#autotoc_md22',1,'']]],
+  ['las_20variables_20que_20se_20crean_20en_20c_20explique_20la_20diferencia_20entre_20el_20almacenamiento_20de_20variables_20locales_20y_20globales_11',['16. Â¿Donde y como se guardan las variables que se crean en C++? Explique la diferencia entre el almacenamiento de variables locales y globales.',['../index.html#autotoc_md19',1,'']]],
+  ['leak_12',['23. Â¿Investigue que es un memory leak?',['../index.html#autotoc_md26',1,'']]],
+  ['lenguaje_20de_20programacion_20compilado_13',['8. Explique que es un linker en el contexto de un lenguaje de programacion compilado.',['../index.html#autotoc_md10',1,'']]],
+  ['lenguaje_20de_20programacion_20compilado_20y_20uno_20interpretado_14',['7. Â¿CuÃ¡les son las diferencias fundamentales entre un lenguaje de programacion compilado y uno interpretado?',['../index.html#autotoc_md9',1,'']]],
+  ['linker_20en_20el_20contexto_20de_20un_20lenguaje_20de_20programacion_20compilado_15',['8. Explique que es un linker en el contexto de un lenguaje de programacion compilado.',['../index.html#autotoc_md10',1,'']]],
+  ['lista_20en_20c_16',['22. Â¿Cual es la diferencia entre un arreglo y una lista en C++?',['../index.html#autotoc_md25',1,'']]],
+  ['locales_20y_20globales_17',['16. Â¿Donde y como se guardan las variables que se crean en C++? Explique la diferencia entre el almacenamiento de variables locales y globales.',['../index.html#autotoc_md19',1,'']]],
+  ['los_20datos_20de_20ese_20arreglo_20mediante_20el_20puntero_18',['18. Cuando se usa un puntero para apuntar a un arreglo en C++, Â¿a que valor o direccion apunta inicialmente? Describa cÃ³mo seria la forma de acceder a todos los datos de ese arreglo mediante el puntero.',['../index.html#autotoc_md21',1,'']]],
+  ['los_20punteros_20dobles_20en_20c_20proporcione_20ejemplos_20de_20situaciones_20en_20las_20que_20los_20punteros_20dobles_20son_20necesarios_20o_20beneficiosos_19',['19. Explique para que son empleados los punteros dobles en C++. Proporcione ejemplos de situaciones en las que los punteros dobles son necesarios o beneficiosos.',['../index.html#autotoc_md22',1,'']]],
+  ['los_20siguientes_20comandos_20de_20git_3a_20git_20init_20git_20add_20git_20commit_20git_20push_20git_20pull_20git_20clone_20git_20branch_20git_20merge_20',['2. Explique el proposito y el uso de los siguientes comandos de Git: git init, git add, git commit, git push, git pull, git clone, git branch, git merge.',['../index.html#autotoc_md4',1,'']]]
+];
