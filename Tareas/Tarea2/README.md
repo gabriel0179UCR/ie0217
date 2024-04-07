@@ -104,8 +104,63 @@ Un puntero que dirige a un objeto, al extraer su valor, extrar todos los atribut
 La funcion prototipo es la declaracion de la funcion. Esta funcion incluye el nombre de al funcion, el tipo y los parametros que recibe.
 
 ### 13. ¿Explique los diferentes tipos de miembros que existen en la OOP?
+Los miembros de un objeto en la OOP son aquellos atributos y métodos clasificados entre los distintos tipos de acceso (mencionados en la pregunta 2); private, protected y public. Por lo tanto, los miembros que existen en la OOP son atributos y metodos privados, protegidos y publicos.
+
 ### 14. ¿Que es un memory leak?
+Un memory leak es la memoria que se utilizo y se dejo de utilizar, pero no fue liberada. Estos espacios en memoria no se pueden liberar porque el programa ya no contiene los punteros a estos espacios. La principal causa de un memory leak es el espacio en memoria no liberado de las variables estaticas de forma manual.
+
+Referencia: A.Hicken, Finding a Memory Leak in C or C++, https://www.parasoft.com/blog/finding-memory-leaks-in-c-or-c/#:~:text=In%20computer%20science%2C%20a%20memory,accessed%20by%20the%20running%20code.
+
 ### 15. ¿Que es y cual es la importancia de la Herencia multinivel, multiple y jerarquica de C+?
+
+ - Herencia multinivel: Tipo de herencia en el cual una clase derivada hereda a otra clase. La clase base A hereda a una clase B y esta clase derivada B hereda a una clase C.
+```c++
+class A {
+    // Estructura de la clase
+};
+
+class B : public A {
+    // Estructura de la clase
+};
+
+class C : public B {
+    // Estructura de la clase
+};
+```
+Este tipo de herencia permite la creacion de clases complejas a partir de clases mas basicas. Asi como proporciona la reutilizacion de codigo.
+
+ - Herencia multiple: Tipo de herencia en el cual una clase hereda de dos clases distintas. Las clases A y B heredan a la C.
+```c++
+class A {
+    // Estructura de la clase
+};
+
+class B {
+    // Estructura de la clase
+};
+
+class C : public A, public B {
+    // Estructura de la clase
+};
+```
+Este tipo de herencia permite la combinacion de atributos y metodos de clases distintas reutilizando codigo.
+
+ - Herencia jerarquica: Tipo de herencia en el cual dos o mas clases derivan de una misma clase en comun. La clase base A hereda a la clase B y C.
+```c++
+class A {
+    // Estructura de la clase
+};
+
+class B : public A {
+    // Estructura de la clase
+};
+
+class C : public A {
+    // Estructura de la clase
+};
+```
+Este tipo de herencia permite la caracterizacion global de objetos y, a partir de estos, caracterizarlos de forma especifica mediante nuevas clases.
+
 ### 16. ¿Que es la composicion y como se implementa en C++?
 ### 17. ¿Que es la sobreescritura de funciones en C++ y cuando es bueno usarla?
 ### 18. ¿Que es un metodo y un atributo y cual es la diferencia entre ellos?
