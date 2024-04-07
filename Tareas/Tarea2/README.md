@@ -162,8 +162,56 @@ class C : public A {
 Este tipo de herencia permite la caracterizacion global de objetos y, a partir de estos, caracterizarlos de forma especifica mediante nuevas clases.
 
 ### 16. ¿Que es la composicion y como se implementa en C++?
+La composicion, al igual que la herencia, busca derivar propiedades de las clases a nuevas clases. La principal diferencia respecto a la herencia es que no se especifica explicitamente que se esta utilizando la composicion. La composicion se implementa de la siguiente forma:
+
+```c++
+class claseA {
+    // Estructura de la clase
+};
+
+class claseB {
+    // Estructura de la clase B
+    claseA obj;
+};
+```
+En el ejemplo anterior, al declarar un objeto obj de la clase claseA dentro de la clase claseB, esta adquiere por composicion los atributos y metodos de la claseA.
+
+
 ### 17. ¿Que es la sobreescritura de funciones en C++ y cuando es bueno usarla?
+La sobreescritura de funciones ocurre cuando al heredar una clase, la nueva clase cambia una de las funciones de la clase padre. Ej:
+```c++
+class A {
+    public:
+        void func() {
+            // Estructura A
+        }
+};
+
+class B : public A {
+    public:
+        void func() {
+            // Estructura B
+        }
+}
+```
+En el ejemplo anterior, la clase B sobreescribe la funcion func con la Estructura B en lugar de la Estructura A. La sobreescrituran de funciones es bueno utilizarla cuando las clases heredadas poseen un comportamiento distinto a la clase padre al ser mas espefificas.
+
 ### 18. ¿Que es un metodo y un atributo y cual es la diferencia entre ellos?
+Un metodo es una accion que realiza un objeto de una clase y un atributo es una propiedad de un objeto de una clase. Ej:
+```c++
+class A {
+    public:
+        // Atributo
+        int a;
+
+        // Metodo
+        void b() {
+            // Accion
+        }
+}
+```
+En el ejemplo anterior se muestra que un atributo es una variable que describe a la clase y el metodo es una accion que la clase realiza.
+
 ### 19. ¿Que es el constructor y el destructor en una clase?
 ### 20. ¿Que es la sobrecarga de operadores en C++ y como se utiliza?
 
