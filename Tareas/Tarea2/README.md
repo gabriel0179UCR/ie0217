@@ -95,8 +95,14 @@ int main() {
 El poliformismo puede ser de dos tipos estatico y dinamico. El poliformismo estatico es cuando el poliformismo se aplica en tiempo de compilacion, a diferencia del poliformismo dinamico que se aplica en tiempo de ejecucion. El polimorfismo estatico se definen con las funciones y plantillas sobrecargadas. El poliformismo dinamico se definen con las funciones virtuales de las clases.
 
 ### 10. ¿Que son las clases anidadas y cual es su utilidad en C++?
+Las clases anidadas son clases definidas dentro de otras clases. Este tipo de clases se utilizan para encapsular y compartir datos y metodos de la clase principal.
+
 ### 11. En el contexto de la programacion orientada a objetos en C++, ¿como se pueden utilizar los punteros para trabajar con objetos y clases? Explique tambien por que los punteros a objetos son utiles en la programacion orientada a objetos.
+Un puntero que dirige a un objeto, al extraer su valor, extrar todos los atributos y metodos del objeto. Esto permite modificar el objeto en funciones. Los punteros son utiles en la programacion orientada a objetos principalmente para pasar objetos como argumentos de una funcion o para que una funcion retorne un objeto. 
+
 ### 12. ¿Que es una funcion prototipo?
+La funcion prototipo es la declaracion de la funcion. Esta funcion incluye el nombre de al funcion, el tipo y los parametros que recibe.
+
 ### 13. ¿Explique los diferentes tipos de miembros que existen en la OOP?
 ### 14. ¿Que es un memory leak?
 ### 15. ¿Que es y cual es la importancia de la Herencia multinivel, multiple y jerarquica de C+?
