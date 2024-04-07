@@ -51,8 +51,49 @@ El encapsulamiento es uno de los principios de la programacion orientada a objet
 El contructor se encarga de inicializar una clase con la plantilla de atributos y metodos que posee. Por otro lado, el destructor se encarga de borrar la clase y liberar el espacio.
 
 ### 7. ¿Investigue como se define una clase abstracta en C++ y cual es su funcion?
+La funcion de una clase abstracta es de ser una clase base para las clases heredadas. Los metodos se tienen que sobreescribir en las clases heredadas. Se define de la siguiente forma:
+
+```c++
+class CLASS1 {
+    public:
+        virtual void func1() = 0;
+};
+```
+
 ### 8. ¿Investigue que es un constructor de copia y para que se utiliza en C++?
+El constructor de copia es una funcion interna de una clase que toma en consideracion cuando se crea un nuevo objeto de la clase y se le ingresa como parametro otro objeto. El contructor de copia se utiliza para copiar los datos de un objeto a otro. Ej:
+
+```c++
+class CLASS1 {
+    public:
+        // Constructor de copia //
+        CLASS1(const CLASS1& other) {
+            a1 = other.a1;
+            a2 = other.a2;
+        }
+        //////////////////////////
+
+        CLASS1(int a1, int a2) {
+            this->a1 = a1;
+            this->a2 = a2;
+        }
+    private:
+        int a1;
+        int a2;
+};
+
+int main() {
+    CLASS1 objectA(1, 2);
+    CLASS1 objectB(objectA)
+
+    return 0;
+}
+```
+
+
 ### 9. ¿Investigue que es el polimorfismo estatico y dinamico en C++ y como se diferencian?
+El poliformismo puede ser de dos tipos estatico y dinamico. El poliformismo estatico es cuando el poliformismo se aplica en tiempo de compilacion, a diferencia del poliformismo dinamico que se aplica en tiempo de ejecucion. El polimorfismo estatico se definen con las funciones y plantillas sobrecargadas. El poliformismo dinamico se definen con las funciones virtuales de las clases.
+
 ### 10. ¿Que son las clases anidadas y cual es su utilidad en C++?
 ### 11. En el contexto de la programacion orientada a objetos en C++, ¿como se pueden utilizar los punteros para trabajar con objetos y clases? Explique tambien por que los punteros a objetos son utiles en la programacion orientada a objetos.
 ### 12. ¿Que es una funcion prototipo?
