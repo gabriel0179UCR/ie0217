@@ -213,5 +213,31 @@ class A {
 En el ejemplo anterior se muestra que un atributo es una variable que describe a la clase y el metodo es una accion que la clase realiza.
 
 ### 19. ¿Que es el constructor y el destructor en una clase?
-### 20. ¿Que es la sobrecarga de operadores en C++ y como se utiliza?
+El contructor se encarga de inicializar una clase con la plantilla de atributos y metodos que posee. Por otro lado, el destructor se encarga de borrar la clase y liberar el espacio.
 
+### 20. ¿Que es la sobrecarga de operadores en C++ y como se utiliza?
+La sobrecarga de operadores es la caracteristica de la programacion orientada a objetos que permite definir que acciones tomar entre dos o mas objetos al utilizar un operado (por ejemplo al sumar dos objetos). Ej:
+
+```c++
+class Number {
+    public:
+        int var1;
+        Number(int n1) : var1(n1) {}
+
+        Number operator+ (const Number &f) {
+            return var1 + f.var1;
+        }        
+};
+
+int main() {
+    Number num1(1);
+    Number num2(2);
+
+    Number num3 = num1 + num2;
+
+    // num3.var1 = 3
+
+    return 0;
+}
+```
+En el ejemplo anterior se utiliza la connotacion 'NOMBRE_CLASE operatorOPERADOR (const NOMBRE_CLASE &f)' para definir que es lo que se va a realizar con OPERADOR. En el presente ejemplo OPERADOR es la suma y la accion que se especifica realizar es la de sumar los atributos v1 de ambos objetos.
