@@ -2,6 +2,7 @@
 
 ## Parte Practica
 
+Incompleto. Se creó la definición y declaración de las clases. No se completó el programa.
 
 ## Parte Teorica
 
