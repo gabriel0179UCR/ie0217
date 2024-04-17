@@ -16,3 +16,19 @@ void agregarContacto(Contacto contactos[], int &numContactos) {
 
     numContactos++;
 }
+
+void eliminarContacto(Contacto contactos[], int &numContactos, int index) {
+    std::string nombre;
+    std::cout << "Ingrese el nombre del contacto a eliminar: ";
+    std::cin >> nombre;
+    for (int j = 0; j < numContactos; j++) {
+        if (contactos[j].nombre == nombre) {
+            for (int i = j; i < numContactos; i++) {
+                contactos[i].nombre = contactos[i + 1].nombre;
+                contactos[i].telefono = contactos[i + 1].telefono;
+            };
+            numContactos--;
+            break;
+        };
+    };
+}

@@ -5,5 +5,6 @@
 #include "Contacto.hpp"
 
 void agregarContacto(Contacto listaContactos[], int &numContactos);
+void eliminarContacto(Contacto contactos[], int &numContactos, int index);
 
 #endif // FUNCIONES_HPP
