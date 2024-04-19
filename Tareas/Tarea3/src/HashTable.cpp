@@ -24,7 +24,7 @@ int HashTable::funcionHash(int key) {
 }
 
 // Definicion de la funcion que permite ingresar datos a la Hash Table
-void HashTable::ingresarContacto(int key, string value) {
+int HashTable::ingresarContacto(int key, string value) {
     int valorHash = funcionHash(key);
     list<pair<int, string>>& filas = tabla[valorHash];
     list<pair<int, string>>::iterator filasPtr = begin(filas);
@@ -42,7 +42,7 @@ void HashTable::ingresarContacto(int key, string value) {
         filas.emplace_back(key, value);
     }
 
-    return;
+    return valorHash;
 }
 
 // Definicion de la funcion que permite eliminar datos de la Hash Table

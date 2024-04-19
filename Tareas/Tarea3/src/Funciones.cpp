@@ -5,7 +5,8 @@ Contacto agregarContacto(Contacto contactos[], int &numContactos) {
     // Consulta de datos del nuevo contacto
     std::string nombre;
     int telefono;
-    std::cout << "Ingrese el nombre del contacto: ";
+    std::cout << "\nIngrese el nombre del contacto: ";
+    std::cin.ignore();
     getline(std::cin, nombre);
     std::cout << "Ingrese el numero de telefono: ";
     std::cin >> telefono;
@@ -14,11 +15,6 @@ Contacto agregarContacto(Contacto contactos[], int &numContactos) {
     int index = numContactos+1;
     contactos[index].nombre = nombre;
     contactos[index].telefono = telefono;
-
-    //std::cout << "Test" << std::endl; 
-    //HT->ingresarContacto(telefono, nombre);
-    //std::cout << "Test2" << std::endl; 
-    //HT->imprimirTabla();
 
     numContactos++;
 

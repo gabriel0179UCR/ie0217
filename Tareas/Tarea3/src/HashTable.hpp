@@ -16,7 +16,7 @@ class HashTable {
         //virtual ~HashTable(){} // Destructor
         bool estaVacio() const;
         int funcionHash(int key);
-        void ingresarContacto(int key, string value);
+        int ingresarContacto(int key, string value);
         void eliminarContacto(int key);
         // string searchTable(int key); Buscar
         void imprimirTabla();

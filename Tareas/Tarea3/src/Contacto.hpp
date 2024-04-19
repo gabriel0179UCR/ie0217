@@ -10,6 +10,13 @@ struct Contacto {
     int telefono;
 };
 
+/* Estructura para definir los Contactos enlazados */
+struct ContactoCloud {
+    std::string nombre;
+    int telefono;
+    int hashTableKey;
+    ContactoCloud* siguiente;
+};
 
 
 #endif // CONTACTO_HPP
