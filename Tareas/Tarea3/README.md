@@ -20,7 +20,7 @@ g++ -o main.exe .\main.cpp .\HashTable.cpp .\Funciones.cpp .\FuncionesCloud.cpp
 ```
 .\main.exe
 ```
-
+Nota: Los comandos de compilar y ejecutar aplican cuando se situa dentro de la carpeta src.
 ## Parte teorica
 
 ### 1. ¿Que es un algoritmo y cuales son sus caracteristicas principales?
