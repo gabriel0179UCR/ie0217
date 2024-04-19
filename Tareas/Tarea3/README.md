@@ -1,6 +1,22 @@
 # Tarea 3
 
 ## Parte practica
+### Programa que simula un almacenamiento de contactos en la nube.
+Opciones del programa:
+1. Agregar un contacto.
+2. Eliminar un contacto.
+3. Imprimir Hash-Table y Listas Enlazadas.
+4. Mostrar todos los contactos".
+5. Salir del programa".
+
+### Compilar:
+```
+g++ -o main.exe .\main.cpp .\HashTable.cpp .\Funciones.cpp .\FuncionesCloud.cpp
+```
+### Ejecutar:
+```
+.\main.exe
+```
 
 ## Parte teorica
 
