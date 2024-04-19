@@ -17,7 +17,7 @@ class HashTable {
         bool estaVacio() const;
         int funcionHash(int key);
         int ingresarContacto(int key, string value);
-        void eliminarContacto(int key);
+        void eliminarContacto(string nombre);
         // string searchTable(int key); Buscar
         void imprimirTabla();
 };

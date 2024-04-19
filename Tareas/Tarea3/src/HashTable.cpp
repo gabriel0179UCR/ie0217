@@ -46,13 +46,31 @@ int HashTable::ingresarContacto(int key, string value) {
 }
 
 // Definicion de la funcion que permite eliminar datos de la Hash Table
-void HashTable::eliminarContacto(int key) {
-    int valorHash = funcionHash(key);
+void HashTable::eliminarContacto(string nombre) {  //(int key) {
+    int numero = -1;
+    for (int i{}; i < maxSize; ++i) {
+        if (tabla[i].size() == 0) {
+            continue;
+        }
+
+        list<pair<int, string>>::iterator filasPtr = tabla[i].begin();
+        for (; filasPtr != tabla[i].end(); ++filasPtr) {
+            if (filasPtr->second == nombre) {
+                numero = filasPtr->first;
+                break;
+            }
+        }
+        if (numero == -1) {
+            return;
+        }
+    }
+
+    int valorHash = funcionHash(numero);
     list<pair<int, string>>& filas = tabla[valorHash];
     list<pair<int, string>>::iterator filasPtr = begin(filas);
     bool keyExists = false;
     for (; filasPtr != end(filas); ++filasPtr) {
-        if (filasPtr->first == key) {
+        if (filasPtr->first == numero) {
             keyExists = true;
             filasPtr = filas.erase(filasPtr);
             cout << "[INFO] Pair removed." << endl;
