@@ -5,15 +5,15 @@
 #include <list>
 #include <cstring>
 using namespace std;
-#define MAX_CONTACTOS 100
+#define MAX_KEYS 100
 
 class HashTable {
     private:
-        static const int maxSize = MAX_CONTACTOS;
+        static const int maxSize = MAX_KEYS;
         list<pair<int, string>> tabla[maxSize];
     
     public:
-        virtual ~HashTable(){} // Destructor
+        //virtual ~HashTable(){} // Destructor
         bool estaVacio() const;
         int funcionHash(int key);
         void ingresarContacto(int key, string value);

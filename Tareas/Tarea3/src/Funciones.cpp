@@ -1,20 +1,32 @@
 #include "Contacto.hpp"
 
-void agregarContacto(Contacto contactos[], int &numContactos) {
+Contacto agregarContacto(Contacto contactos[], int &numContactos) {
 
     // Consulta de datos del nuevo contacto
     std::string nombre;
     int telefono;
     std::cout << "Ingrese el nombre del contacto: ";
-    std::cin >> nombre;
+    getline(std::cin, nombre);
     std::cout << "Ingrese el numero de telefono: ";
     std::cin >> telefono;
 
     // Se agrega el nuevo contacto a la lista de contactos que se tiene
-    contactos[numContactos+1].nombre = nombre;
-    contactos[numContactos+1].telefono = telefono;
+    int index = numContactos+1;
+    contactos[index].nombre = nombre;
+    contactos[index].telefono = telefono;
+
+    //std::cout << "Test" << std::endl; 
+    //HT->ingresarContacto(telefono, nombre);
+    //std::cout << "Test2" << std::endl; 
+    //HT->imprimirTabla();
 
     numContactos++;
+
+    Contacto contacto;
+    contacto.nombre = nombre;
+    contacto.telefono = telefono;
+
+    return contacto;
 }
 
 void eliminarContacto(Contacto contactos[], int &numContactos) {
@@ -52,7 +64,7 @@ void bubbleSort(Contacto contactos[], int numContactos) {
                 contactos[i].nombre = contactos[i + 1].nombre;
                 contactos[i + 1].nombre = tempNombre;
 
-                std::string tempTelefono = contactos[i].telefono;
+                int tempTelefono = contactos[i].telefono;
                 contactos[i].telefono = contactos[i + 1].telefono;
                 contactos[i + 1].telefono = tempTelefono;
 
