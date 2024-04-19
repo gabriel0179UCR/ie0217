@@ -34,7 +34,6 @@ int HashTable::ingresarContacto(int key, string value) {
         if (filasPtr->first == key) {
             keyExists = true;
             filasPtr->second = value;
-            cout << "[WARNING] Key Exist. Value replaced." << endl;
             break;
         }
     }
@@ -47,32 +46,17 @@ int HashTable::ingresarContacto(int key, string value) {
 }
 
 // Definicion de la funcion que permite eliminar datos de la Hash Table
-void HashTable::eliminarContacto(Contacto contactos[], int numContactos, string nombre) {  //(int key) {
+void HashTable::eliminarContacto(Contacto contactos[], int numContactos, string nombre) {
     int numero = -1;
     for (int i = 0; i < numContactos; ++i) {
         if (contactos[i].nombre == nombre) {
             numero = contactos[i].telefono;
         };
     };
-    //for (int i=0; i < maxSize; ++i) {
-    //    if (tabla[i].size() == 0) {
-    //        continue;
-    //    }
-
-    //    list<pair<int, string>>::iterator filasPtr = tabla[i].begin();
-    //    cout << "TEST: " << filasPtr->second << endl;
-    //    for (; filasPtr != tabla[i].end(); ++filasPtr) {
-    //        
-    //        if (filasPtr->second == nombre) {
-    //            numero = filasPtr->first;
-    //            break;
-    //        }
-    //    }
 
     if (numero == -1) {
         return;
     };
-    //}
 
     int valorHash = funcionHash(numero);
     list<pair<int, string>>& filas = tabla[valorHash];
@@ -82,13 +66,8 @@ void HashTable::eliminarContacto(Contacto contactos[], int numContactos, string 
         if (filasPtr->first == numero) {
             keyExists = true;
             filasPtr = filas.erase(filasPtr);
-            cout << "[INFO] Pair removed." << endl;
             break;
         }
-    }
-
-    if (!keyExists) {
-        cout << "[WARNING] Key not found. Pair not removed." << endl;
     }
 
     return;
@@ -96,6 +75,7 @@ void HashTable::eliminarContacto(Contacto contactos[], int numContactos, string 
 
 // Definicion de la funcion que imprime la Hash Table
 void HashTable::imprimirTabla() {
+    cout << "Hash Table:" << endl;
     for (int i{}; i < maxSize; ++i) {
         if (tabla[i].size() == 0) {
             continue;
@@ -103,8 +83,10 @@ void HashTable::imprimirTabla() {
 
         list<pair<int, string>>::iterator filasPtr = tabla[i].begin();
         for (; filasPtr != tabla[i].end(); ++filasPtr) {
-            cout << "[INFO] Key: " << filasPtr->first << " Value: " << filasPtr->second <<  endl;
+            cout << "Telefono: " << filasPtr->first << " Nombre: " << filasPtr->second <<  endl;
         }
+        
     }
+    cout << endl;
     return;
 }

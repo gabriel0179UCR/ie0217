@@ -1,15 +1,16 @@
 #include "Contacto.hpp"
-
+#include <string>
+using namespace std;
 Contacto agregarContacto(Contacto contactos[], int &numContactos) {
 
     // Consulta de datos del nuevo contacto
-    std::string nombre;
+    string nombre;
     int telefono;
-    std::cout << "\nIngrese el nombre del contacto: ";
-    std::cin.ignore();
-    getline(std::cin, nombre);
-    std::cout << "Ingrese el numero de telefono: ";
-    std::cin >> telefono;
+    cout << "\nIngrese el nombre del contacto: ";
+    cin.ignore();
+    getline(cin, nombre);
+    cout << "Ingrese el numero de telefono: ";
+    cin >> telefono;
 
     // Se agrega el nuevo contacto a la lista de contactos que se tiene
     int index = numContactos+1;
@@ -25,10 +26,7 @@ Contacto agregarContacto(Contacto contactos[], int &numContactos) {
     return contacto;
 }
 
-void eliminarContacto(Contacto contactos[], int &numContactos) {
-    std::string nombre;
-    std::cout << "Ingrese el nombre del contacto a eliminar: ";
-    std::cin >> nombre;
+void eliminarContacto(Contacto contactos[], int &numContactos, string nombre) {
     for (int j = 0; j < numContactos; j++) {
         if (contactos[j].nombre == nombre) {
             for (int i = j; i < numContactos; i++) {
@@ -56,7 +54,7 @@ void bubbleSort(Contacto contactos[], int numContactos) {
 
                 // swapping elements if elements
                 // are not in the intended order
-                std::string tempNombre = contactos[i].nombre;
+                string tempNombre = contactos[i].nombre;
                 contactos[i].nombre = contactos[i + 1].nombre;
                 contactos[i + 1].nombre = tempNombre;
 
@@ -77,9 +75,10 @@ void bubbleSort(Contacto contactos[], int numContactos) {
 
 void mostrarContactos(Contacto contactos[], int &numContactos) {
     bubbleSort(contactos, numContactos);
+    cout << "Lista de contactos: " << endl;
     for (int i = 0; i < numContactos; ++i) {
-        std::cout << "Nombre: " << contactos[i].nombre << std::endl;
-        std::cout << "Telefono: " << contactos[i].telefono << std::endl << std::endl;
+        cout << "Nombre: " << contactos[i].nombre << endl;
+        cout << "Telefono: " << contactos[i].telefono << endl;
     }
 }
 

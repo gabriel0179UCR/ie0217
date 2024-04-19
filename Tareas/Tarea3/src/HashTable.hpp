@@ -14,7 +14,7 @@ class HashTable {
         list<pair<int, string>> tabla[maxSize];
     
     public:
-        //virtual ~HashTable(){} // Destructor
+        virtual ~HashTable(){} // Destructor
         bool estaVacio() const;
         int funcionHash(int key);
         int ingresarContacto(int key, string value);

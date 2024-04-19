@@ -16,7 +16,6 @@ void agregarContactoCloud(ContactoCloud*& cloud, int valorHash, string nombre, i
 
 void mostrarContactosCloud(ContactoCloud* cloud) {
     if (cloud == nullptr) {
-        cout << "No hay contactos guardados en la nube." << endl;
         return;
     }
 
@@ -26,6 +25,7 @@ void mostrarContactosCloud(ContactoCloud* cloud) {
         cout << " Telefono: " << cloud->telefono << endl;
         cloud = cloud->siguiente;
     }
+    cout << endl;
 }
 
 void eliminarContactoCloud(ContactoCloud*& cloud, string nombre) {
@@ -42,7 +42,7 @@ void eliminarContactoCloud(ContactoCloud*& cloud, string nombre) {
         } else {
             agregarContactoCloud(newCloud, actualCloud->hashTableKey, actualCloud->nombre, actualCloud->telefono);
         }
-        cout << "TEST: " << newCloud->nombre << endl;
+
         actualCloud = actualCloud->siguiente;
         nextCloud = nextCloud->siguiente;
     }
