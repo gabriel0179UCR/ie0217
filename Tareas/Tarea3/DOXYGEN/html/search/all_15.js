@@ -1,0 +1,10 @@
+var searchData=
+[
+  ['o_20o_20y_20la_20notacion_20omega_20en_20el_20analisis_20de_20la_20complejidad_20temporal_20de_20los_20algoritmos_20proporciona_20un_20ejemplo_20de_20un_20algoritmo_20y_20determina_20su_20complejidad_20temporal_20utilizando_20ambas_20notaciones_20big_20o_20y_20omega_0',['21. Explique la diferencia entre la notacion Big O (O) y la notacion Omega () en el analisis de la complejidad temporal de los algoritmos. Proporciona un ejemplo de un algoritmo y determina su complejidad temporal utilizando ambas notaciones Big O y Omega.',['../index.html#autotoc_md26',1,'']]],
+  ['omega_20en_20el_20analisis_20de_20la_20complejidad_20temporal_20de_20los_20algoritmos_20proporciona_20un_20ejemplo_20de_20un_20algoritmo_20y_20determina_20su_20complejidad_20temporal_20utilizando_20ambas_20notaciones_20big_20o_20y_20omega_1',['21. Explique la diferencia entre la notacion Big O (O) y la notacion Omega () en el analisis de la complejidad temporal de los algoritmos. Proporciona un ejemplo de un algoritmo y determina su complejidad temporal utilizando ambas notaciones Big O y Omega.',['../index.html#autotoc_md26',1,'']]],
+  ['opciones_2',['Opciones',['../main_8cpp.html#a51895b572f6326a7f2db364ea2fa886f',1,'main.cpp']]],
+  ['operacion_20de_20insercion_20push_20en_20una_20pila_20stack_3',['13. Explica como se realiza la operacion de insercion (push) en una pila (stack).',['../index.html#autotoc_md18',1,'']]],
+  ['operaciones_20de_20apilar_20push_20y_20desapilar_20pop_20en_20una_20pila_4',['14. Â¿Cual es la complejidad temporal de las operaciones de apilar (push) y desapilar (pop) en una pila?',['../index.html#autotoc_md19',1,'']]],
+  ['operaciones_20que_20se_20pueden_20realizar_5',['5. Â¿Que es la memoria dinamica y como se gestiona en lenguajes de programacion como C++, explique las operaciones que se pueden realizar?',['../index.html#autotoc_md10',1,'']]],
+  ['orden_20y_20en_20postorden_20en_20un_20arbol_20binario_20balanceado_6',['20. Â¿Cual es la complejidad temporal del recorrido en preorden, en orden y en postorden en un arbol binario balanceado?',['../index.html#autotoc_md25',1,'']]]
+];

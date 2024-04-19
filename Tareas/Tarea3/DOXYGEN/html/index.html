@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Contactos: Tarea 3</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Contactos<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">Contactos C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Tarea 3 </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="md__r_e_a_d_m_e"></a> </p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Parte practica</h1>
+<h2><a class="anchor" id="autotoc_md2"></a>
+Programa que simula un almacenamiento de contactos en la nube.</h2>
+<p>Opciones del programa:</p><ol type="1">
+<li>Agregar un contacto.</li>
+<li>Eliminar un contacto.</li>
+<li>Imprimir Hash-Table y Listas Enlazadas.</li>
+<li>Mostrar todos los contactos".
+5. Salir del programa".</li>
+</ol>
+<h2><a class="anchor" id="autotoc_md3"></a>
+Compilar:</h2>
+<div class="fragment"><div class="line">g++ -o main.exe .\main.cpp .\HashTable.cpp .\Funciones.cpp .\FuncionesCloud.cpp</div>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md4"></a>
+Ejecutar:</h2>
+<div class="fragment"><div class="line">.\main.exe</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md5"></a>
+Parte teorica</h1>
+<h2><a class="anchor" id="autotoc_md6"></a>
+1. Â¿Que es un algoritmo y cuales son sus caracteristicas principales?</h2>
+<p>Conjunto de instrucciones para resolver un problema particular.</p>
+<p>Caracteristicas: a. La entrada y la salida deben definirse con precision. b. Cada paso del algoritmo debe ser claro e inequivoco. c. Los algoritmos deberias ser mas eficaces entre muchas formas diferentes de resolver un problema. d. Un algoritmo no deberia incluir codigo informatico.</p>
+<h2><a class="anchor" id="autotoc_md7"></a>
+2. Explica la diferencia entre un algoritmo eficiente y uno ineficiente.</h2>
+<p>Un algoritmo efinciente es aquel que realiza una tarea en la menor cantida de tiempo y utilizando la menor cantidad de memoria posible. En el caso contrario, un algoritmo ineficiente realiza una tarea en una gran cantidad de tiempo y utilizando una gran cantidad de memoria.</p>
+<h2><a class="anchor" id="autotoc_md8"></a>
+3. Â¿Que es una estructura de datos y por que son importantes?</h2>
+<p>Una estructura de datos es un almacenamiento que se utiliza para almacenar y organizar datos. Es importante seleccionar una correcta estructura de datos para lograr la mejor eficiencia.</p>
+<h2><a class="anchor" id="autotoc_md9"></a>
+4. Describe las diferencias entre una estructura de datos estatica y una dinamica.</h2>
+<p>En la estructura de datos estatica la memoria para las estructuras se asigna durante la compilacion. Por otra parte, la estructura de datos dinamica la memoria para las estructuras se asigna durante la ejecucion.</p>
+<h2><a class="anchor" id="autotoc_md10"></a>
+5. Â¿Que es la memoria dinamica y como se gestiona en lenguajes de programacion como C++, explique las operaciones que se pueden realizar?</h2>
+<p>La memoria dinamica es la asignacion que se realiza en los espacios de memoria durante la ejecucion. La memoria dinamica se puede utilizar con variables como malloc y realloc.</p>
+<h2><a class="anchor" id="autotoc_md11"></a>
+6. Â¿Cuales son las ventajas y desventajas de la memoria dinamica en comparacion con la memoria estatica?</h2>
+<p>La memoria dinamica permite mayor flexibilidad y adaptibilidad del codigo, pero aumenta la complejidad y el riesgo de fugas de la memoria. Por otra parte, la memoria estatica posee un riesgo de fugas de memoria bajo y mayor eficiencia.</p>
+<h2><a class="anchor" id="autotoc_md12"></a>
+7. Explique que es un arbol binario y cuales son sus principales caracterÄ±sticas.</h2>
+<p>Es una estructura de datos de arbol en la que cada nodo padre puede tener como maximo dos hijos. Cada nodo de un arbol binario consta de tres elementos: datos, direccion del hijo izquierdo, direccion del hijo derecho.</p>
+<h2><a class="anchor" id="autotoc_md13"></a>
+8. Â¿Que es una cola (queue) y en que situaciones se utiliza comunmente?</h2>
+<p>Espacio en memoria que funciona bajo la regla de Primero en entrar, primero en salir. Su principal aplicacion es en aquellos casos en que los datos ingresar por orden de llegada.</p>
+<h2><a class="anchor" id="autotoc_md14"></a>
+9. Â¿Cual es la diferencia entre una cola queue y una pila (stack)?</h2>
+<p>La diferencia entre la cola y la pila es en el orden de acceso. La cola sigue la regla de Primero en entrar, primero en salir. La pila sigue la regla de Primero en entrar, ultimo en salir.</p>
+<h2><a class="anchor" id="autotoc_md15"></a>
+10. Describe como funciona el algoritmo de insercion (insert) en una tabla hash.</h2>
+<p>El algoritmo de insercion en una tabla hash se encarga de ingresar un par a la tabla hash y se encarga de asignarle la llave correspondiente.</p>
+<h2><a class="anchor" id="autotoc_md16"></a>
+11. Â¿Que es la funcion de dispersion (hash function) y por que es importante en las tablas hash?</h2>
+<p>La funcion de dispersion se encarga de distribuir los datos nuevos en la tabla hash uniformemente con su respectiva indexacion.</p>
+<h2><a class="anchor" id="autotoc_md17"></a>
+12. Â¿Cual es la complejidad temporal promedio de busqueda en una tabla hash bien implementada?</h2>
+<p>La complejidad temporal promedio es de O(1), lo cual significa que el tiempo promedio para encontrar un elemento es constante.</p>
+<h2><a class="anchor" id="autotoc_md18"></a>
+13. Explica como se realiza la operacion de insercion (push) en una pila (stack).</h2>
+<p>Para realizar la operacion de insercion en una pila se debe verificar si hay espacio disponible en la memoria. En caso de no haber espacio disponible, se expande. Se almacena el nuevo elemento y se actualiza el tamaÃ±o de la pila.</p>
+<h2><a class="anchor" id="autotoc_md19"></a>
+14. Â¿Cual es la complejidad temporal de las operaciones de apilar (push) y desapilar (pop) en una pila?</h2>
+<p>Al igual que en la tabla hash, la complejidad temporal promedio es de O(1), lo cual significa que el tiempo promedio para encontrar un elemento es constante.</p>
+<h2><a class="anchor" id="autotoc_md20"></a>
+15. Describe como funciona una lista enlazada y cuales son sus ventajas y desventajas.</h2>
+<p>Una lista enlazada es una lista que posee un elemento que apunta al siguiente elemento de la lista. Esto permite poder tener una relacion entre todos los elemntos, pero requiere de una mayor complejidad para acceder a los elementos del mismo.</p>
+<h2><a class="anchor" id="autotoc_md21"></a>
+16. Â¿Que es un nodo en una lista enlazada y que contiene?</h2>
+<p>Un nodo en una lista enlaza es un nodo que apunta al siguiente nodo. Contiene el dato del nodo y la direccion del siguiente nodo.</p>
+<h2><a class="anchor" id="autotoc_md22"></a>
+17. Â¿Cual es la diferencia entre una lista enlazada simple y una lista enlazada doblemente enlazada?</h2>
+<p>En una lista enlazada simple, un elemento apunta al siguiente. En una lista enlazada doble enlazada, un elemento puede apuntar a uno o dos elementos.</p>
+<h2><a class="anchor" id="autotoc_md23"></a>
+18. Â¿Como se realiza la eliminacion (delete) de un nodo en una lista enlazada?</h2>
+<p>La eliminacion de un nodo de una lista se realiza guardando el estado actual de la lista situado en la posicion actual que se desea eliminar, se elimina el elemento en una variable temporal y se reasigna los valores sin el valor eliminado.</p>
+<h2><a class="anchor" id="autotoc_md24"></a>
+19. Explica como funciona el algoritmo de recorrido (traversal) en un arbol binario.</h2>
+<p>Recorrido en orden: Primero, todos los nodos en el subÃ¡rbol izquierdo. Luego, el nodo raÃ­z. Finalmente todos los nodos en el subÃ¡rbol derecho. Recorrido de pre-orden: Primero, el nodo raÃ­z. Luego, todos los nodos en el subÃ¡rbol izquierdo. Finalmente todos los nodos en el subÃ¡rbol derecho. Recorrido post-orden: Primero, todos los nodos en el subÃ¡rbol izquierdo. Luego, todos los nodos en el subÃ¡rbol derecho. Finalmente, el nodo raÃ­z.</p>
+<h2><a class="anchor" id="autotoc_md25"></a>
+20. Â¿Cual es la complejidad temporal del recorrido en preorden, en orden y en postorden en un arbol binario balanceado?</h2>
+<p>Al igual que en la tabla hash, la complejidad temporal promedio es de O(n), en el que n es el numero de nodos en el arbol.</p>
+<h2><a class="anchor" id="autotoc_md26"></a>
+21. Explique la diferencia entre la notacion Big O (O) y la notacion Omega () en el analisis de la complejidad temporal de los algoritmos. Proporciona un ejemplo de un algoritmo y determina su complejidad temporal utilizando ambas notaciones Big O y Omega.</h2>
+<p>La notaciÃ³n Big-O representa el lÃ­mite superior del tiempo de ejecuciÃ³n de un algoritmo. Por tanto, proporciona la complejidad del peor de los casos de un algoritmo.</p>
+<p>La notaciÃ³n omega representa el lÃ­mite inferior del tiempo de ejecuciÃ³n de un algoritmo. Por lo tanto, proporciona el mejor caso de complejidad de un algoritmo. </p>
+</div></div><!-- PageDoc -->
+<a href="doxygen_crawl.html"/>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

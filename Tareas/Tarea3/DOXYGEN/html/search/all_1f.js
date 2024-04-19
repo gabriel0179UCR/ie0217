@@ -1,0 +1,16 @@
+var searchData=
+[
+  ['â¿como_20se_20realiza_20la_20eliminacion_20delete_20de_20un_20nodo_20en_20una_20lista_20enlazada_0',['18. Â¿Como se realiza la eliminacion (delete) de un nodo en una lista enlazada?',['../index.html#autotoc_md23',1,'']]],
+  ['â¿cual_20es_20la_20complejidad_20temporal_20de_20las_20operaciones_20de_20apilar_20push_20y_20desapilar_20pop_20en_20una_20pila_1',['14. Â¿Cual es la complejidad temporal de las operaciones de apilar (push) y desapilar (pop) en una pila?',['../index.html#autotoc_md19',1,'']]],
+  ['â¿cual_20es_20la_20complejidad_20temporal_20del_20recorrido_20en_20preorden_20en_20orden_20y_20en_20postorden_20en_20un_20arbol_20binario_20balanceado_2',['20. Â¿Cual es la complejidad temporal del recorrido en preorden, en orden y en postorden en un arbol binario balanceado?',['../index.html#autotoc_md25',1,'']]],
+  ['â¿cual_20es_20la_20complejidad_20temporal_20promedio_20de_20busqueda_20en_20una_20tabla_20hash_20bien_20implementada_3',['12. Â¿Cual es la complejidad temporal promedio de busqueda en una tabla hash bien implementada?',['../index.html#autotoc_md17',1,'']]],
+  ['â¿cual_20es_20la_20diferencia_20entre_20una_20cola_20queue_20y_20una_20pila_20stack_4',['9. Â¿Cual es la diferencia entre una cola queue y una pila (stack)?',['../index.html#autotoc_md14',1,'']]],
+  ['â¿cual_20es_20la_20diferencia_20entre_20una_20lista_20enlazada_20simple_20y_20una_20lista_20enlazada_20doblemente_20enlazada_5',['17. Â¿Cual es la diferencia entre una lista enlazada simple y una lista enlazada doblemente enlazada?',['../index.html#autotoc_md22',1,'']]],
+  ['â¿cuales_20son_20las_20ventajas_20y_20desventajas_20de_20la_20memoria_20dinamica_20en_20comparacion_20con_20la_20memoria_20estatica_6',['6. Â¿Cuales son las ventajas y desventajas de la memoria dinamica en comparacion con la memoria estatica?',['../index.html#autotoc_md11',1,'']]],
+  ['â¿que_20es_20la_20funcion_20de_20dispersion_20hash_20function_20y_20por_20que_20es_20importante_20en_20las_20tablas_20hash_7',['11. Â¿Que es la funcion de dispersion (hash function) y por que es importante en las tablas hash?',['../index.html#autotoc_md16',1,'']]],
+  ['â¿que_20es_20la_20memoria_20dinamica_20y_20como_20se_20gestiona_20en_20lenguajes_20de_20programacion_20como_20c_20explique_20las_20operaciones_20que_20se_20pueden_20realizar_8',['5. Â¿Que es la memoria dinamica y como se gestiona en lenguajes de programacion como C++, explique las operaciones que se pueden realizar?',['../index.html#autotoc_md10',1,'']]],
+  ['â¿que_20es_20un_20algoritmo_20y_20cuales_20son_20sus_20caracteristicas_20principales_9',['1. Â¿Que es un algoritmo y cuales son sus caracteristicas principales?',['../index.html#autotoc_md6',1,'']]],
+  ['â¿que_20es_20un_20nodo_20en_20una_20lista_20enlazada_20y_20que_20contiene_10',['16. Â¿Que es un nodo en una lista enlazada y que contiene?',['../index.html#autotoc_md21',1,'']]],
+  ['â¿que_20es_20una_20cola_20queue_20y_20en_20que_20situaciones_20se_20utiliza_20comunmente_11',['8. Â¿Que es una cola (queue) y en que situaciones se utiliza comunmente?',['../index.html#autotoc_md13',1,'']]],
+  ['â¿que_20es_20una_20estructura_20de_20datos_20y_20por_20que_20son_20importantes_12',['3. Â¿Que es una estructura de datos y por que son importantes?',['../index.html#autotoc_md8',1,'']]]
+];
