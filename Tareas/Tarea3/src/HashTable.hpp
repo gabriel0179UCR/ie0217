@@ -4,6 +4,7 @@
 #include <iostream>
 #include <list>
 #include <cstring>
+#include "Contacto.hpp"
 using namespace std;
 #define MAX_KEYS 100
 
@@ -17,8 +18,7 @@ class HashTable {
         bool estaVacio() const;
         int funcionHash(int key);
         int ingresarContacto(int key, string value);
-        void eliminarContacto(string nombre);
-        // string searchTable(int key); Buscar
+        void eliminarContacto(Contacto contactos[], int numContactos, string nombre);
         void imprimirTabla();
 };
 

@@ -1,4 +1,5 @@
 #include "HashTable.hpp"
+#include "Contacto.hpp"
 #include <iostream>
 #include <list>
 #include <cstring>
@@ -46,24 +47,32 @@ int HashTable::ingresarContacto(int key, string value) {
 }
 
 // Definicion de la funcion que permite eliminar datos de la Hash Table
-void HashTable::eliminarContacto(string nombre) {  //(int key) {
+void HashTable::eliminarContacto(Contacto contactos[], int numContactos, string nombre) {  //(int key) {
     int numero = -1;
-    for (int i{}; i < maxSize; ++i) {
-        if (tabla[i].size() == 0) {
-            continue;
-        }
+    for (int i = 0; i < numContactos; ++i) {
+        if (contactos[i].nombre == nombre) {
+            numero = contactos[i].telefono;
+        };
+    };
+    //for (int i=0; i < maxSize; ++i) {
+    //    if (tabla[i].size() == 0) {
+    //        continue;
+    //    }
 
-        list<pair<int, string>>::iterator filasPtr = tabla[i].begin();
-        for (; filasPtr != tabla[i].end(); ++filasPtr) {
-            if (filasPtr->second == nombre) {
-                numero = filasPtr->first;
-                break;
-            }
-        }
-        if (numero == -1) {
-            return;
-        }
-    }
+    //    list<pair<int, string>>::iterator filasPtr = tabla[i].begin();
+    //    cout << "TEST: " << filasPtr->second << endl;
+    //    for (; filasPtr != tabla[i].end(); ++filasPtr) {
+    //        
+    //        if (filasPtr->second == nombre) {
+    //            numero = filasPtr->first;
+    //            break;
+    //        }
+    //    }
+
+    if (numero == -1) {
+        return;
+    };
+    //}
 
     int valorHash = funcionHash(numero);
     list<pair<int, string>>& filas = tabla[valorHash];
