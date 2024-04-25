@@ -1,6 +1,14 @@
+//#include <iostream>
+//#include <vector>
+//#include <algorithm>
+//#include <algorithm>
+
 #include <iostream>
 #include <vector>
+#include <algorithm>
+#include <string>
 
+#include "Libro.hpp"
 #include "Biblioteca.hpp"
 
 // Funcion que permite agregar libros a la biblioteca

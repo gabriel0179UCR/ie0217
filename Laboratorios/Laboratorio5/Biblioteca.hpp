@@ -2,6 +2,10 @@
 #define BIBLIOTECA_HPP
 
 #include "Libro.hpp"
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <string>
 
 // Declaracion de la clase Biblioteca
 class Biblioteca {

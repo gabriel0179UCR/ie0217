@@ -1,6 +1,8 @@
 #ifndef LIBRO_HPP
 #define LIBRO_HPP
 
+#include <string>
+
 // Declaracion de la clase Libro
 class Libro {
 public:
