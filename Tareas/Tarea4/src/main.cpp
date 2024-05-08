@@ -1,3 +1,4 @@
+#include <iostream>
 #include <vector>
 using namespace std;
 
@@ -8,15 +9,30 @@ class Matriz {
 
         Matriz() {}
         ~Matriz() {}
-        void setDimensiones(int filas, int columnas) {
+        void setDimensiones(int _filas, int _columnas) {
+            filas = _filas;
+            columnas = _columnas;
             matriz.resize(filas);
             for (auto& fila : matriz)
                 fila.resize(columnas);
-        }
-        void llenarMatriz() {
+            
             return;
         }
+        void llenarMatriz() {
+            cout << "Ingrese los valores" << endl;
+            T value;
+            for (int i=0; i<filas; ++i){
+                for (int j=0; j<columnas; ++j) {
+                    cin >> value;
+                    matriz[i][j] = value;
+                }
+            }
+            return;
+        }
+
     private:
+        int filas;
+        int columnas;
         vector<vector<T>> matriz;
 };
 
@@ -29,8 +45,9 @@ class Matriz {
 // Menu
 int main() {
     Matriz<int> test;
+    test.setDimensiones(2,2);
+    test.llenarMatriz();
 
-    test.setDimensiones(2,3);
 
 
     return 0;
