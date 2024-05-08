@@ -1,14 +1,14 @@
 # Tarea 4
 
 ## Documentacion de doxygen en Netlify:
-
+URL: https://tarea4b90457.netlify.app/
 
 ## Parte practica
 ### Descripcion
-
+Programa que simula una calculadora de matrices en las que se puede sumar, restar y multiplicar.
 ### Compilar:
 ```
-g++ -o main.exe .\main.cpp .\HashTable.cpp .\Funciones.cpp .\FuncionesCloud.cpp
+g++ -o main.exe .\main.cpp
 ```
 ### Ejecutar:
 ```
