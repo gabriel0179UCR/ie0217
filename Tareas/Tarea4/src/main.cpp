@@ -25,36 +25,38 @@ class OperacionesBasicas {
         vector<vector<T>> sumaMatrices(vector<vector<T>>&a, vector<vector<T>>&b) {
             int aFilas = a.size();
             int aColumnas = a[0].size();
-            vector<vector<T>> result(aFilas, vector<T>(aColumnas));
+            vector<vector<T>> resultadoSuma(aFilas, vector<T>(aColumnas));
             for (int i=0; i<aFilas; ++i){
                 for (int j=0; j<aColumnas; ++j) {
-                    result[i][j] = a[i][j] + b[i][j];
+                    resultadoSuma[i][j] = a[i][j] + b[i][j];
                 }
             }
-            return result;
+            return resultadoSuma;
         }
-        void restarMatrices(vector<vector<T>>&a, vector<vector<T>>&b) {
+        vector<vector<T>> restaMatrices(vector<vector<T>>&a, vector<vector<T>>&b) {
             int aFilas = a.size();
             int aColumnas = a[0].size();
+            vector<vector<T>> resultadoResta(aFilas, vector<T>(aColumnas));
             for (int i=0; i<aFilas; ++i){
                 for (int j=0; j<aColumnas; ++j) {
-                    cout << a[i][j] - b[i][j] << " ";
+                    resultadoResta[i][j] = a[i][j] - b[i][j];
                 }
             }
+            return resultadoResta;
         }
         vector<vector<T>> multiplicarMatrices(vector<vector<T>>&a, vector<vector<T>>&b) {
             int aFilas = a.size();
             int aColumnas = a[0].size();
             int bColumnas = b[0].size();
-            vector<vector<T>> result(aFilas, bColumnas);
+            vector<vector<T>> resultadoMultiplicacion(aFilas, vector<T>(bColumnas));
             for (int i = 0; i < aFilas; ++i) {
                 for (int j = 0; j < bColumnas; ++j) {
                     for (int k = 0; k < aColumnas; ++k) {
-                        result[i][j] += a[i][k] * b[k][j];
+                        resultadoMultiplicacion[i][j] += a[i][k] * b[k][j];
                     }
                 }
             }
-            return result;
+            return resultadoMultiplicacion;
         }
 };
 
@@ -68,12 +70,15 @@ class Matriz {
         vector<vector<T>> matriz;
         Matriz() {}
         ~Matriz() {}
-        void setDimensiones(bool _result = false) {
+        void setDimensiones(int _filas = 0, int _columnas = 0, bool _result = false) {
             if (!_result) {
                 cout << "Ingrese el numero de filas: ";
                 cin >> filas;
                 cout << "Ingrese el numero de columnas: ";
                 cin >> columnas;
+            } else {
+                filas = _filas;
+                columnas = _columnas;
             }
             matriz.resize(filas);
             for (auto& fila : matriz)
@@ -114,7 +119,8 @@ class Matriz {
             vector<vector<T>> matrizA = a.matriz;
             OperacionesBasicas<T> operacionesBasicas;
             operacionesBasicas.validarSumaResta(matriz, matrizA);
-            Matriz<T> resultado(filas, columnas, true);
+            Matriz<T> resultado;
+            resultado.setDimensiones(filas, columnas, true);
             resultado.matriz = operacionesBasicas.sumaMatrices(matriz, matrizA);
             return resultado;
         }
@@ -122,7 +128,8 @@ class Matriz {
             OperacionesBasicas<T> operacionesBasicas;
             vector<vector<T>> matrizA = a.matriz;
             operacionesBasicas.validarSumaResta(matriz, matrizA);
-            Matriz<T> resultado(filas, columnas, true);
+            Matriz<T> resultado;
+            resultado.setDimensiones(filas, columnas, true);
             resultado.matriz = operacionesBasicas.restaMatrices(matriz, matrizA);
             return resultado;
         }
@@ -130,7 +137,8 @@ class Matriz {
             vector<vector<T>> matrizA = a.matriz;
             OperacionesBasicas<T> operacionesBasicas;
             operacionesBasicas.validarMultiplicacion(matriz, matrizA);
-            Matriz<T> resultado(a.filas, columnas, true);
+            Matriz<T> resultado;
+            resultado.setDimensiones(a.filas, columnas, true);
             resultado.matriz = operacionesBasicas.multiplicarMatrices(matriz, matrizA);
             return resultado;
         }
@@ -280,6 +288,43 @@ int main() {
                 break;
             case EJECUTAR:
                 cout << endl;
+                if (tipo = INT) {
+                    Matriz<int> cInt;
+                    if (operacion == SUMA) {
+                        cInt = aInt + bInt;
+                    } else if (operacion == RESTA) {
+                        cInt = aInt - bInt;
+                    } else if (operacion == MULTIPLICACION) {
+                        cInt = aInt * bInt;
+                    } else {
+                        cout << endl << "Opcion incorrecta" << endl;
+                    }
+                    cInt.mostrarMatriz();
+                } else if (tipo = FLOAT) {
+                    Matriz<float> cFloat;
+                    if (operacion = SUMA) {
+                        cFloat = aFloat + bFloat;
+                    } else if (operacion = RESTA) {
+                        cFloat = aFloat - bFloat;
+                    } else if (operacion = MULTIPLICACION) {
+                        cFloat = aFloat * bFloat;
+                    } else {
+                        cout << endl << "Opcion incorrecta" << endl;
+                    }
+                    cFloat.mostrarMatriz();
+                } else if (tipo = COMPLEX) {
+                    Matriz<std::complex<double>> cComplex;
+                    if (operacion = SUMA) {
+                        cComplex = aComplex + bComplex;
+                    } else if (operacion = RESTA) {
+                        cComplex = aComplex - bComplex;
+                    } else if (operacion = MULTIPLICACION) {
+                        cComplex = aComplex * bComplex;
+                    } else {
+                        cout << endl << "Opcion incorrecta" << endl;
+                    }
+                    cComplex.mostrarMatriz();
+                };
                 break;
             case EXIT:
                 cout << endl;
