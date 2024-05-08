@@ -6,10 +6,12 @@ template <typename T>
 class Matriz {
     public:
 
-        Matriz(int _filas, int _columnas) : filas(_filas), columnas(_columnas) {}
+        Matriz() {}
         ~Matriz() {}
         void setDimensiones(int filas, int columnas) {
-            return;
+            matriz.resize(filas);
+            for (auto& fila : matriz)
+                fila.resize(columnas);
         }
         void llenarMatriz() {
             return;
@@ -25,3 +27,11 @@ class Matriz {
 
 
 // Menu
+int main() {
+    Matriz<int> test;
+
+    test.setDimensiones(2,3);
+
+
+    return 0;
+}
