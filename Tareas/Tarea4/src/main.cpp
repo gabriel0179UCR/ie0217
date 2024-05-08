@@ -196,7 +196,7 @@ int main() {
     int opcion = 0;
     bool exit = false;
     while(!exit){
-        cout << endl << "///// Contactos /////" << endl;
+        cout << endl << "///// Calculadora /////" << endl;
         cout << "1. Ingresar el tipo de datos de las matrices" << endl;
         cout << "2. Ingresar tamano y valores de las matrices" << endl;
         cout << "3. Ingresar la operacion que se desea realizar" << endl;
