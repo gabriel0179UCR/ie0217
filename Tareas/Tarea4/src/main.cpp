@@ -58,6 +58,34 @@ class OperacionesBasicas {
             if (a.columnas == b.filas)
                 cout << "Multiplicacion valida" << endl;
         }
+        void sumaMatrices(Matriz<T>&a, Matriz<U>&b) {
+            for (int i=0; i<a.filas; ++i){
+                for (int j=0; j<a.columnas; ++j) {
+                    cout << a.matriz[i][j] + b.matriz[i][j] << " ";
+                }
+                cout << endl;
+            }
+        }
+        void restarMatrices(Matriz<T>&a, Matriz<U>&b) {
+            for (int i=0; i<a.filas; ++i){
+                for (int j=0; j<a.columnas; ++j) {
+                    cout << a.matriz[i][j] - b.matriz[i][j] << " ";
+                }
+                cout << endl;
+            }
+        }
+        void multiplicarMatrices(Matriz<T>&a, Matriz<U>&b) {
+            vector<vector<T>> result(a.filas, b.columnas);
+            for (int i = 0; i < a.filas; ++i) {
+                for (int j = 0; j < b.columnas; ++j) {
+                    for (int k = 0; k < a.columnas; ++k) {
+                        result[i][j] += a.matriz[i][k] * b.matriz[k][j];
+                    }
+                    cout << result[i][j] << " ";
+                }
+                cout << endl;
+            }
+        }
 };
 
 // Clase ValidadorDeEntrada
