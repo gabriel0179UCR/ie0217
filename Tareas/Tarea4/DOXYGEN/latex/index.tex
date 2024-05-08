@@ -1,0 +1,240 @@
+\chapter{Tarea 4}
+\hypertarget{index}{}\label{index}\index{Tarea 4@{Tarea 4}}
+\label{index_md__r_e_a_d_m_e}%
+\Hypertarget{index_md__r_e_a_d_m_e}%
+ \hypertarget{index_autotoc_md1}{}\doxysection{\texorpdfstring{Documentacion de doxygen en Netlify\+:}{Documentacion de doxygen en Netlify\+:}}\label{index_autotoc_md1}
+\hypertarget{index_autotoc_md2}{}\doxysection{\texorpdfstring{Parte practica}{Parte practica}}\label{index_autotoc_md2}
+\hypertarget{index_autotoc_md3}{}\doxysubsection{\texorpdfstring{Descripcion}{Descripcion}}\label{index_autotoc_md3}
+\hypertarget{index_autotoc_md4}{}\doxysubsection{\texorpdfstring{Compilar\+:}{Compilar\+:}}\label{index_autotoc_md4}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{g++\ -\/o\ main.exe\ .\(\backslash\)main.cpp\ .\(\backslash\)HashTable.cpp\ .\(\backslash\)Funciones.cpp\ .\(\backslash\)FuncionesCloud.cpp}
+
+\end{DoxyCode}
+ \hypertarget{index_autotoc_md5}{}\doxysubsection{\texorpdfstring{Ejecutar\+:}{Ejecutar\+:}}\label{index_autotoc_md5}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{.\(\backslash\)main.exe}
+
+\end{DoxyCode}
+ Nota\+: Los comandos de compilar y ejecutar aplican cuando se situa dentro de la carpeta src.\hypertarget{index_autotoc_md6}{}\doxysection{\texorpdfstring{Parte teorica}{Parte teorica}}\label{index_autotoc_md6}
+\hypertarget{index_autotoc_md7}{}\doxysubsection{\texorpdfstring{1. Templates\+:}{1. Templates\+:}}\label{index_autotoc_md7}
+
+\begin{DoxyItemize}
+\item 1. {\bfseries{Definicion de Templates}}\+: Explique el concepto de templates en C++ y proporcione un ejemplo simple. Los templates en C++ son caracteristicas que permiten crear codigo generico de funciones y clases para ser usados con distintos tipos de datos sin la necesidad de escribir codigo para cada tipo de dato. En el siguiente ejemplo se crea una funcion template que realiza una suma y con el template permite sumar distintos tipos de datos.
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ ++}
+\DoxyCodeLine{\textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{T\ add(T\ num1,\ T\ num2)\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ (num1\ +\ num2);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyItemize}
+\item 2. {\bfseries{Sobrecarga de Plantillas}}\+: Â¿\+Como se realiza la sobrecarga de funciones con plantillas en C++?
+\end{DoxyItemize}
+
+La sobrecarga de funciones con plantillas en C++ se realiza a partir de una funcion de plantilla y una funcion normal.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ ++}
+\DoxyCodeLine{\textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>\ }
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ f(T\ x,\ T\ y)\ \{\ }
+\DoxyCodeLine{\ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Es\ plantilla"{}}\ <<\ endl;\ }
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ f(\textcolor{keywordtype}{int}\ w,\ \textcolor{keywordtype}{int}\ z)\ \{\ }
+\DoxyCodeLine{\ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}No\ es\ plantilla"{}}\ <<\ endl;\ }
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ main()\ \{}
+\DoxyCodeLine{\ \ \ f(\ 1\ ,\ \ 2\ );\ \textcolor{comment}{//\ No\ es\ plantilla}}
+\DoxyCodeLine{\ \ \ f(\textcolor{charliteral}{'a'},\ \textcolor{charliteral}{'b'});\ \textcolor{comment}{//\ Es\ plantilla}}
+\DoxyCodeLine{\ \ \ f(\ 1\ ,\ \textcolor{charliteral}{'b'});\ \textcolor{comment}{//\ No\ es\ plantilla}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyItemize}
+\item 3. {\bfseries{Plantillas de Clases}}\+: Explique como se pueden utilizar plantillas en la definicion de clases en C++. Las plantillas en las definiciones de clases permite crear una unica clase y poder trabajar con distintos tipos de datos. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ ++}
+\DoxyCodeLine{\textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{\textcolor{keyword}{class\ }className\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ T\ var;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ...\ ..\ ...}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ T\ functionName(T\ arg);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ...\ ..\ ...}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+
+\end{DoxyItemize}\hypertarget{index_autotoc_md8}{}\doxysubsection{\texorpdfstring{2. Excepciones\+:}{2. Excepciones\+:}}\label{index_autotoc_md8}
+
+\begin{DoxyItemize}
+\item 4. {\bfseries{Manejo de Excepciones}}\+: Describa los bloques try, catch y throw y como se utilizan para el manejo de excepciones en C++. El bloque try menciona el codigo que puede generar una excepcion. El bloque catch menciona el codigo que se encarga de manejar la excepcion. El bloque throw lanza una excepcion cuando se detecta un error. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ ++}
+\DoxyCodeLine{\textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Codigo\ que\ puede\ generar\ una\ excepcion}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{throw}\ argument;}
+\DoxyCodeLine{\}\ \textcolor{keywordflow}{catch}\ (exception)\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Codigo\ que\ maneja\ la\ excepcion}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+\item 5. {\bfseries{Excepciones Estandar}}\+: Nombre al menos tres excepciones estandar proporcionadas por C++ y proporciona ejemplos de situaciones en las que podrian ser utiles.
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ ++}
+\DoxyCodeLine{std::invalid\_argument\ \textcolor{comment}{//\ Excepcion\ estandar\ que\ indica\ un\ valor\ erroneo}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ b\ =\ 0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (b\ ==\ 0)\ \{}
+\DoxyCodeLine{\ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}b\ es\ cero"{}});}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ ++}
+\DoxyCodeLine{std::bad\_alloc\ \textcolor{comment}{//\ Excepcion\ estandar\ que\ indica\ que\ un\ programa\ falla\ al\ asignar\ memoria}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int}*\ datos\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[tamano];}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (!datos)\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{throw}\ std::bad\_alloc();}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ ++}
+\DoxyCodeLine{std::out\_of\_range\ \textcolor{comment}{//\ Excepcion\ estandar\ que\ indica\ que\ se\ esta\ tratando\ de\ acceder\ a\ un\ elemento\ fuera\ de\ un\ contenedor}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ buscarElemento(\textcolor{keyword}{const}\ std::vector<int>\&\ datos,\ \textcolor{keywordtype}{int}\ valor)\ \{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ datos.size();\ ++i)\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (datos[i]\ ==\ valor)}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{return}\ i;}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{throw}\ std::out\_of\_range(\textcolor{stringliteral}{"{}Elemento\ fuera\ de\ rango"{}});}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyItemize}
+\item 6. {\bfseries{Politica de Manejo de Excepciones}}\+: Â¿\+Que es una politica de manejo de excepciones y por que es importante considerarla al diseÃ±ar software? La politica de manejo de excepciones es un conjunto de reglas que se deben seguir para manejar los errores a nivel de codigo que pueden surgir. Es importante seguir una politica de manejo de excepciones debido a que el codigo bajo manejo desprevenido puede llegar a fallar en distintas formas.
+\item 7. {\bfseries{Noexcept}}\+: Explica el proposito de la palabra clave noexcept y como se utiliza en C++. La palabra clave noexcept se utiliza para indicar que una funcion no lanzara excepciones durante su ejecucion.
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ ++}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ fuctionName(\textcolor{keywordtype}{int}\ arg)\ \textcolor{keyword}{noexcept};}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyItemize}
+\item 8. Explique la diferencia entre las excepciones {\bfseries{std\+::logic error}} y {\bfseries{std\+::runtime error}}. La excepcion std\+::logic error indica errores de logica de programacion. Mientras que std\+::runtime error indica errores debido a factores externos o condiciones inesperadas.
+\item 9. Explique que ocurre cuando una {\bfseries{excepcion no es capturada}}. Cuando una excepcion no es capturada puede conllevar a un comportamiento inesperado del programa o que el programa finalice con un mensaje de error.
+\end{DoxyItemize}\hypertarget{index_autotoc_md9}{}\doxysubsection{\texorpdfstring{3. STL (Standard Template Library)\+:}{3. STL (Standard Template Library)\+:}}\label{index_autotoc_md9}
+
+\begin{DoxyItemize}
+\item 10. {\bfseries{Contenedores STL}}\+: Nombre cinco contenedores diferentes de la STL y explique brevemente en que situaciones seria apropiado usar cada uno.
+\end{DoxyItemize}
+
+El contenedor vector se utiliza cuando se requiere eliminar elementos con frecuencia de cualquier parte del contenedor.
+
+El contenedor list se utiliza cuando se requiere de insertar y eliminar elementos al principio o al final del contenedor con frecuencia.
+
+El contenedor queue se utiliza cuando se requiere de procesar elementos en el orden en que se agregaron.
+
+El contenedor arrays se utiliza cuando se conoce el tamano del arreglo de elementos con antelacion.
+
+El contenedor map se utiliza cuando se requiere una asociacion entre claces y valores.
+
+
+\begin{DoxyItemize}
+\item 11. {\bfseries{Iteradores en STL}}\+: Explique el concepto de iteradores en la STL y como se utilizan para acceder a elementos en contenedores. Los iteradores permiten acceder a los elementos de un contenedor en distinto orden (dependiendo del tipo de iterador). En el siguiente ejemplo apunta a un vector en el cual permiote acceder a todos los ejemplos del mismo.
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ ++}
+\DoxyCodeLine{vector<string>::iterator\ itr;}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyItemize}
+\item 12. {\bfseries{Algoritmos STL}}\+: Proporcione ejemplos de al menos tres algoritmos de la STL y describa sus funciones basicas.
+\end{DoxyItemize}
+
+Algoritmo copy\+: Copia elementos de un rango a otro. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ ++}
+\DoxyCodeLine{std::vector<int>\ origen\ =\ \{1,\ 2,\ 3,\ 4,\ 5\};}
+\DoxyCodeLine{std::vector<int>\ destino(5);}
+\DoxyCodeLine{std::copy(origen.begin(),\ origen.end(),\ destino.begin());}
+
+\end{DoxyCode}
+ Algoritmo remove\+: Elimina elementos especificos de un rango. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ ++}
+\DoxyCodeLine{std::vector<int>\ numeros\ =\ \{1,\ 2,\ 3,\ 4,\ 5,\ 4,\ 3,\ 2,\ 1\};}
+\DoxyCodeLine{std::vector<int>::iterator\ it\ =\ std::remove(numeros.begin(),\ numeros.end(),\ 4);}
+\DoxyCodeLine{numeros.erase(it,\ numeros.end());}
+
+\end{DoxyCode}
+ Algoritmo replace\+: Reemplaza elementos especificos en un rango. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ ++}
+\DoxyCodeLine{std::vector<char>\ letras\ =\ \{\textcolor{charliteral}{'a'},\ \textcolor{charliteral}{'b'},\ \textcolor{charliteral}{'c'},\ \textcolor{charliteral}{'a'},\ \textcolor{charliteral}{'b'},\ \textcolor{charliteral}{'c'}\};}
+\DoxyCodeLine{std::replace(letras.begin(),\ letras.end(),\ \textcolor{charliteral}{'a'},\ 1);}
+
+\end{DoxyCode}
+
+\begin{DoxyItemize}
+\item 13. {\bfseries{Algoritmos Personalizados}}\+: Â¿\+Como podria utilizar un algoritmo personalizado con la STL?
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ ++}
+\DoxyCodeLine{\textcolor{keyword}{struct\ }Comparador\ \{}
+\DoxyCodeLine{\ \ \textcolor{keywordtype}{bool}\ operator()(\textcolor{keywordtype}{int}\ a,\ \textcolor{keywordtype}{int}\ b)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ a\ >\ b;}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ main()\ \{}
+\DoxyCodeLine{\ \ std::vector<int>\ v\ =\ \{5,\ 2,\ 4,\ 1,\ 3\};}
+\DoxyCodeLine{\ \ std::sort(v.begin(),\ v.end(),\ Comparador());}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

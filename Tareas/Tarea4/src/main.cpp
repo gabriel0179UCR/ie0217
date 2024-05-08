@@ -5,9 +5,12 @@
 using namespace std;
 
 // Clase OperacionesBasicas
+
 template <typename T>
+//! Clase de operaciones basicas entre matrices
 class OperacionesBasicas {
     public:
+        //! Metodo que permite validar la suma o resta de matrices
         void validarSumaResta(vector<vector<T>>&a, vector<vector<T>>&b) {
             int aFilas = a.size();
             int aColumnas = a[0].size();
@@ -16,12 +19,14 @@ class OperacionesBasicas {
             if (aFilas == bFilas && aColumnas == bColumnas)
                 cout << "Suma o resta valida" << endl;
         }
+        //! Metodo que permite validar la multiplicacion de matrices
         void validarMultiplicacion(vector<vector<T>>&a, vector<vector<T>>&b) {
             int aColumnas = a[0].size();
             int bFilas = b.size();
             if (aColumnas == bFilas)
                 cout << "Multiplicacion valida" << endl;
         }
+        //! Metodo que permite la suma de matrices
         vector<vector<T>> sumaMatrices(vector<vector<T>>&a, vector<vector<T>>&b) {
             int aFilas = a.size();
             int aColumnas = a[0].size();
@@ -33,6 +38,7 @@ class OperacionesBasicas {
             }
             return resultadoSuma;
         }
+        //! Metodo que permite al resta de matrices
         vector<vector<T>> restaMatrices(vector<vector<T>>&a, vector<vector<T>>&b) {
             int aFilas = a.size();
             int aColumnas = a[0].size();
@@ -44,6 +50,7 @@ class OperacionesBasicas {
             }
             return resultadoResta;
         }
+        //! Metodo que permite la multiplicacion de matrices
         vector<vector<T>> multiplicarMatrices(vector<vector<T>>&a, vector<vector<T>>&b) {
             int aFilas = a.size();
             int aColumnas = a[0].size();
@@ -61,15 +68,16 @@ class OperacionesBasicas {
 };
 
 
-// Clase Matriz
 template <typename T>
+//! Clase de Matriz
 class Matriz {
     public:
         int filas;
         int columnas;
         vector<vector<T>> matriz;
-        Matriz() {}
-        ~Matriz() {}
+        Matriz() {} //! Constructor
+        ~Matriz() {} //! Destructor
+        //! Metodo que permite dimencionar la matriz
         void setDimensiones(int _filas = 0, int _columnas = 0, bool _result = false) {
             if (!_result) {
                 cout << "Ingrese el numero de filas: ";
@@ -86,6 +94,7 @@ class Matriz {
             
             return;
         }
+        //! Metodo que permite llenar los datos de la matriz
         void llenarMatriz() {
             cout << "Ingrese los valores" << endl;
             T value;
@@ -98,6 +107,7 @@ class Matriz {
             }
             return;
         }
+        //! Metodo que permite llenar los datos de la matriz con datos aleatorios
         void llenarMatrizAleatorio() {
             srand(time(0));
             for (int i=0; i<filas; ++i){
@@ -107,6 +117,7 @@ class Matriz {
             }
             return;
         }
+        //! Metodo que permite mostrar la matriz en la terminal
         void mostrarMatriz(){
             for (int i=0; i<filas; ++i){
                 for (int j=0; j<columnas; ++j) {
@@ -115,6 +126,7 @@ class Matriz {
                 cout << endl;
             }
         }
+        //! Metodo que permite la suma de dos matrices
         Matriz operator+ (const Matriz<T>a) {
             vector<vector<T>> matrizA = a.matriz;
             OperacionesBasicas<T> operacionesBasicas;
@@ -124,6 +136,7 @@ class Matriz {
             resultado.matriz = operacionesBasicas.sumaMatrices(matriz, matrizA);
             return resultado;
         }
+        //! Metodo que permite la resta de dos matrices
         Matriz operator- (const Matriz<T>a) {
             OperacionesBasicas<T> operacionesBasicas;
             vector<vector<T>> matrizA = a.matriz;
@@ -133,6 +146,7 @@ class Matriz {
             resultado.matriz = operacionesBasicas.restaMatrices(matriz, matrizA);
             return resultado;
         }
+        //! Metodo que permite la multiplicacion de dos matrices
         Matriz operator* (const Matriz<T>a) {
             vector<vector<T>> matrizA = a.matriz;
             OperacionesBasicas<T> operacionesBasicas;
@@ -195,6 +209,8 @@ int main() {
     int operacion = 0;
     int opcion = 0;
     bool exit = false;
+
+    // Menu de opciones
     while(!exit){
         cout << endl << "///// Calculadora /////" << endl;
         cout << "1. Ingresar el tipo de datos de las matrices" << endl;

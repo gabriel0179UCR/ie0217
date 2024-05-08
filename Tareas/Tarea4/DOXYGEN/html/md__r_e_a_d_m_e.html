@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Calculadora de matrices: Tarea 4</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Calculadora de matrices
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div><div class="header">
+  <div class="headertitle"><div class="title">Tarea 4</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md0"></a> </p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Documentacion de doxygen en Netlify:</h1>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Parte practica</h1>
+<h2><a class="anchor" id="autotoc_md3"></a>
+Descripcion</h2>
+<h2><a class="anchor" id="autotoc_md4"></a>
+Compilar:</h2>
+<div class="fragment"><div class="line">g++ -o main.exe .\main.cpp .\HashTable.cpp .\Funciones.cpp .\FuncionesCloud.cpp</div>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md5"></a>
+Ejecutar:</h2>
+<div class="fragment"><div class="line">.\main.exe</div>
+</div><!-- fragment --><p> Nota: Los comandos de compilar y ejecutar aplican cuando se situa dentro de la carpeta src.</p>
+<h1><a class="anchor" id="autotoc_md6"></a>
+Parte teorica</h1>
+<h2><a class="anchor" id="autotoc_md7"></a>
+1. Templates:</h2>
+<ul>
+<li>1. <b>Definicion de Templates</b>: Explique el concepto de templates en C++ y proporcione un ejemplo simple. Los templates en C++ son caracteristicas que permiten crear codigo generico de funciones y clases para ser usados con distintos tipos de datos sin la necesidad de escribir codigo para cada tipo de dato. En el siguiente ejemplo se crea una funcion template que realiza una suma y con el template permite sumar distintos tipos de datos.</li>
+</ul>
+<div class="fragment"><div class="line"> ++</div>
+<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line">T add(T num1, T num2) {</div>
+<div class="line">    <span class="keywordflow">return</span> (num1 + num2);</div>
+<div class="line">}</div>
+</div><!-- fragment --><ul>
+<li>2. <b>Sobrecarga de Plantillas</b>: Â¿Como se realiza la sobrecarga de funciones con plantillas en C++?</li>
+</ul>
+<p>La sobrecarga de funciones con plantillas en C++ se realiza a partir de una funcion de plantilla y una funcion normal.</p>
+<div class="fragment"><div class="line"> ++</div>
+<div class="line"><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt; </div>
+<div class="line"><span class="keywordtype">void</span> f(T x, T y) { </div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;Es plantilla&quot;</span> &lt;&lt; endl; </div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> f(<span class="keywordtype">int</span> w, <span class="keywordtype">int</span> z) { </div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;No es plantilla&quot;</span> &lt;&lt; endl; </div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line">   f( 1 ,  2 ); <span class="comment">// No es plantilla</span></div>
+<div class="line">   f(<span class="charliteral">&#39;a&#39;</span>, <span class="charliteral">&#39;b&#39;</span>); <span class="comment">// Es plantilla</span></div>
+<div class="line">   f( 1 , <span class="charliteral">&#39;b&#39;</span>); <span class="comment">// No es plantilla</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><ul>
+<li>3. <b>Plantillas de Clases</b>: Explique como se pueden utilizar plantillas en la definicion de clases en C++. Las plantillas en las definiciones de clases permite crear una unica clase y poder trabajar con distintos tipos de datos. <div class="fragment"><div class="line"> ++</div>
+<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><span class="keyword">class </span>className {</div>
+<div class="line">    <span class="keyword">private</span>:</div>
+<div class="line">        T var;</div>
+<div class="line">        ... .. ...</div>
+<div class="line">    <span class="keyword">public</span>:</div>
+<div class="line">        T functionName(T arg);</div>
+<div class="line">        ... .. ...</div>
+<div class="line">};</div>
+</div><!-- fragment --></li>
+</ul>
+<h2><a class="anchor" id="autotoc_md8"></a>
+2. Excepciones:</h2>
+<ul>
+<li>4. <b>Manejo de Excepciones</b>: Describa los bloques try, catch y throw y como se utilizan para el manejo de excepciones en C++. El bloque try menciona el codigo que puede generar una excepcion. El bloque catch menciona el codigo que se encarga de manejar la excepcion. El bloque throw lanza una excepcion cuando se detecta un error. <div class="fragment"><div class="line"> ++</div>
+<div class="line"><span class="keywordflow">try</span> {</div>
+<div class="line">    <span class="comment">// Codigo que puede generar una excepcion</span></div>
+<div class="line">    <span class="keywordflow">throw</span> argument;</div>
+<div class="line">} <span class="keywordflow">catch</span> (exception) {</div>
+<div class="line">    <span class="comment">// Codigo que maneja la excepcion</span></div>
+<div class="line">}</div>
+</div><!-- fragment --></li>
+<li>5. <b>Excepciones Estandar</b>: Nombre al menos tres excepciones estandar proporcionadas por C++ y proporciona ejemplos de situaciones en las que podrian ser utiles.</li>
+</ul>
+<div class="fragment"><div class="line"> ++</div>
+<div class="line">std::invalid_argument <span class="comment">// Excepcion estandar que indica un valor erroneo</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> b = 0</div>
+<div class="line"><span class="keywordflow">if</span> (b == 0) {</div>
+<div class="line">   <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;b es cero&quot;</span>);</div>
+<div class="line">}</div>
+</div><!-- fragment --><div class="fragment"><div class="line"> ++</div>
+<div class="line">std::bad_alloc <span class="comment">// Excepcion estandar que indica que un programa falla al asignar memoria</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span>* datos = <span class="keyword">new</span> <span class="keywordtype">int</span>[tamano];</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordflow">if</span> (!datos) {</div>
+<div class="line">    <span class="keywordflow">throw</span> std::bad_alloc();</div>
+<div class="line">}</div>
+</div><!-- fragment --><div class="fragment"><div class="line"> ++</div>
+<div class="line">std::out_of_range <span class="comment">// Excepcion estandar que indica que se esta tratando de acceder a un elemento fuera de un contenedor</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> buscarElemento(<span class="keyword">const</span> std::vector&lt;int&gt;&amp; datos, <span class="keywordtype">int</span> valor) {</div>
+<div class="line">  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; datos.size(); ++i) {</div>
+<div class="line">    <span class="keywordflow">if</span> (datos[i] == valor)</div>
+<div class="line">      <span class="keywordflow">return</span> i;</div>
+<div class="line">  }</div>
+<div class="line">  <span class="keywordflow">throw</span> std::out_of_range(<span class="stringliteral">&quot;Elemento fuera de rango&quot;</span>);</div>
+<div class="line">}</div>
+</div><!-- fragment --><ul>
+<li>6. <b>Politica de Manejo de Excepciones</b>: Â¿Que es una politica de manejo de excepciones y por que es importante considerarla al diseÃ±ar software? La politica de manejo de excepciones es un conjunto de reglas que se deben seguir para manejar los errores a nivel de codigo que pueden surgir. Es importante seguir una politica de manejo de excepciones debido a que el codigo bajo manejo desprevenido puede llegar a fallar en distintas formas.</li>
+<li>7. <b>Noexcept</b>: Explica el proposito de la palabra clave noexcept y como se utiliza en C++. La palabra clave noexcept se utiliza para indicar que una funcion no lanzara excepciones durante su ejecucion.</li>
+</ul>
+<div class="fragment"><div class="line"> ++</div>
+<div class="line"><span class="keywordtype">void</span> fuctionName(<span class="keywordtype">int</span> arg) <span class="keyword">noexcept</span>;</div>
+</div><!-- fragment --><ul>
+<li>8. Explique la diferencia entre las excepciones <b>std::logic error</b> y <b>std::runtime error</b>. La excepcion std::logic error indica errores de logica de programacion. Mientras que std::runtime error indica errores debido a factores externos o condiciones inesperadas.</li>
+<li>9. Explique que ocurre cuando una <b>excepcion no es capturada</b>. Cuando una excepcion no es capturada puede conllevar a un comportamiento inesperado del programa o que el programa finalice con un mensaje de error.</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md9"></a>
+3. STL (Standard Template Library):</h2>
+<ul>
+<li>10. <b>Contenedores STL</b>: Nombre cinco contenedores diferentes de la STL y explique brevemente en que situaciones seria apropiado usar cada uno.</li>
+</ul>
+<p>El contenedor vector se utiliza cuando se requiere eliminar elementos con frecuencia de cualquier parte del contenedor.</p>
+<p>El contenedor list se utiliza cuando se requiere de insertar y eliminar elementos al principio o al final del contenedor con frecuencia.</p>
+<p>El contenedor queue se utiliza cuando se requiere de procesar elementos en el orden en que se agregaron.</p>
+<p>El contenedor arrays se utiliza cuando se conoce el tamano del arreglo de elementos con antelacion.</p>
+<p>El contenedor map se utiliza cuando se requiere una asociacion entre claces y valores.</p>
+<ul>
+<li>11. <b>Iteradores en STL</b>: Explique el concepto de iteradores en la STL y como se utilizan para acceder a elementos en contenedores. Los iteradores permiten acceder a los elementos de un contenedor en distinto orden (dependiendo del tipo de iterador). En el siguiente ejemplo apunta a un vector en el cual permiote acceder a todos los ejemplos del mismo.</li>
+</ul>
+<div class="fragment"><div class="line"> ++</div>
+<div class="line">vector&lt;string&gt;::iterator itr;</div>
+</div><!-- fragment --><ul>
+<li>12. <b>Algoritmos STL</b>: Proporcione ejemplos de al menos tres algoritmos de la STL y describa sus funciones basicas.</li>
+</ul>
+<p>Algoritmo copy: Copia elementos de un rango a otro. </p><div class="fragment"><div class="line"> ++</div>
+<div class="line">std::vector&lt;int&gt; origen = {1, 2, 3, 4, 5};</div>
+<div class="line">std::vector&lt;int&gt; destino(5);</div>
+<div class="line">std::copy(origen.begin(), origen.end(), destino.begin());</div>
+</div><!-- fragment --><p> Algoritmo remove: Elimina elementos especificos de un rango. </p><div class="fragment"><div class="line"> ++</div>
+<div class="line">std::vector&lt;int&gt; numeros = {1, 2, 3, 4, 5, 4, 3, 2, 1};</div>
+<div class="line">std::vector&lt;int&gt;::iterator it = std::remove(numeros.begin(), numeros.end(), 4);</div>
+<div class="line">numeros.erase(it, numeros.end());</div>
+</div><!-- fragment --><p> Algoritmo replace: Reemplaza elementos especificos en un rango. </p><div class="fragment"><div class="line"> ++</div>
+<div class="line">std::vector&lt;char&gt; letras = {<span class="charliteral">&#39;a&#39;</span>, <span class="charliteral">&#39;b&#39;</span>, <span class="charliteral">&#39;c&#39;</span>, <span class="charliteral">&#39;a&#39;</span>, <span class="charliteral">&#39;b&#39;</span>, <span class="charliteral">&#39;c&#39;</span>};</div>
+<div class="line">std::replace(letras.begin(), letras.end(), <span class="charliteral">&#39;a&#39;</span>, 1);</div>
+</div><!-- fragment --><ul>
+<li>13. <b>Algoritmos Personalizados</b>: Â¿Como podria utilizar un algoritmo personalizado con la STL?</li>
+</ul>
+<div class="fragment"><div class="line"> ++</div>
+<div class="line"><span class="keyword">struct </span>Comparador {</div>
+<div class="line">  <span class="keywordtype">bool</span> operator()(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b)<span class="keyword"> const </span>{</div>
+<div class="line">    <span class="keywordflow">return</span> a &gt; b;</div>
+<div class="line">  }</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line">  std::vector&lt;int&gt; v = {5, 2, 4, 1, 3};</div>
+<div class="line">  std::sort(v.begin(), v.end(), Comparador());</div>
+<div class="line">  <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>
