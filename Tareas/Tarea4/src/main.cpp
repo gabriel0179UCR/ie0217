@@ -7,7 +7,18 @@ template <typename T>
 class Matriz {
     public:
 
-        Matriz() {}
+        Matriz() {
+            cout << "Ingrese el numero de filas: ";
+            int _filas;
+            cin >> _filas;
+
+            cout << "Ingrese el numero de columnas: ";
+            int _columnas;
+            cin >> _columnas;
+
+            setDimensiones(_filas, _columnas);
+            llenarMatriz();
+        }
         ~Matriz() {}
         void setDimensiones(int _filas, int _columnas) {
             filas = _filas;
@@ -45,8 +56,8 @@ class Matriz {
 // Menu
 int main() {
     Matriz<int> test;
-    test.setDimensiones(2,2);
-    test.llenarMatriz();
+    //test.setDimensiones(2,2);
+    //test.llenarMatriz();
 
 
 
