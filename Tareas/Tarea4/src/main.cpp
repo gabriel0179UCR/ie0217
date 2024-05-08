@@ -1,6 +1,63 @@
 #include <iostream>
 #include <vector>
+#include <complex>
+#include <ctime>
 using namespace std;
+
+// Clase OperacionesBasicas
+template <typename T>
+class OperacionesBasicas {
+    public:
+        void validarSumaResta(vector<vector<T>>&a, vector<vector<T>>&b) {
+            int aFilas = a.size();
+            int aColumnas = a[0].size();
+            int bFilas = b.size();
+            int bColumnas = b[0].size();
+            if (aFilas == bFilas && aColumnas == bColumnas)
+                cout << "Suma o resta valida" << endl;
+        }
+        void validarMultiplicacion(vector<vector<T>>&a, vector<vector<T>>&b) {
+            int aColumnas = a[0].size();
+            int bFilas = b.size();
+            if (aColumnas == bFilas)
+                cout << "Multiplicacion valida" << endl;
+        }
+        vector<vector<T>> sumaMatrices(vector<vector<T>>&a, vector<vector<T>>&b) {
+            int aFilas = a.size();
+            int aColumnas = a[0].size();
+            vector<vector<T>> result(aFilas, vector<T>(aColumnas));
+            for (int i=0; i<aFilas; ++i){
+                for (int j=0; j<aColumnas; ++j) {
+                    result[i][j] = a[i][j] + b[i][j];
+                }
+            }
+            return result;
+        }
+        void restarMatrices(vector<vector<T>>&a, vector<vector<T>>&b) {
+            int aFilas = a.size();
+            int aColumnas = a[0].size();
+            for (int i=0; i<aFilas; ++i){
+                for (int j=0; j<aColumnas; ++j) {
+                    cout << a[i][j] - b[i][j] << " ";
+                }
+            }
+        }
+        vector<vector<T>> multiplicarMatrices(vector<vector<T>>&a, vector<vector<T>>&b) {
+            int aFilas = a.size();
+            int aColumnas = a[0].size();
+            int bColumnas = b[0].size();
+            vector<vector<T>> result(aFilas, bColumnas);
+            for (int i = 0; i < aFilas; ++i) {
+                for (int j = 0; j < bColumnas; ++j) {
+                    for (int k = 0; k < aColumnas; ++k) {
+                        result[i][j] += a[i][k] * b[k][j];
+                    }
+                }
+            }
+            return result;
+        }
+};
+
 
 // Clase Matriz
 template <typename T>
@@ -8,22 +65,16 @@ class Matriz {
     public:
         int filas;
         int columnas;
-        Matriz() {
-            cout << "Ingrese el numero de filas: ";
-            int _filas;
-            cin >> _filas;
-
-            cout << "Ingrese el numero de columnas: ";
-            int _columnas;
-            cin >> _columnas;
-
-            setDimensiones(_filas, _columnas);
-            llenarMatriz();
-        }
+        vector<vector<T>> matriz;
+        Matriz() {}
         ~Matriz() {}
-        void setDimensiones(int _filas, int _columnas) {
-            filas = _filas;
-            columnas = _columnas;
+        void setDimensiones(bool _result = false) {
+            if (!_result) {
+                cout << "Ingrese el numero de filas: ";
+                cin >> filas;
+                cout << "Ingrese el numero de columnas: ";
+                cin >> columnas;
+            }
             matriz.resize(filas);
             for (auto& fila : matriz)
                 fila.resize(columnas);
@@ -35,65 +86,213 @@ class Matriz {
             T value;
             for (int i=0; i<filas; ++i){
                 for (int j=0; j<columnas; ++j) {
+                    cout << "Ingrese el valor: ";
                     cin >> value;
                     matriz[i][j] = value;
                 }
             }
             return;
         }
-
-    private:
-        vector<vector<T>> matriz;
-};
-
-// Clase OperacionesBasicas
-template <typename T, typename U>
-class OperacionesBasicas {
-    public:
-        void validarSumaResta(Matriz<T>&a, Matriz<U>&b) {
-            if (a.filas == b.filas && a.columnas == b.columnas)
-                cout << "Suma o resta valida" << endl;
+        void llenarMatrizAleatorio() {
+            srand(time(0));
+            for (int i=0; i<filas; ++i){
+                for (int j=0; j<columnas; ++j) {
+                    matriz[i][j] = rand() % 100;
+                }
+            }
+            return;
         }
-        void validarMultiplicacion(Matriz<T>&a, Matriz<U>&b) {
-            if (a.columnas == b.filas)
-                cout << "Multiplicacion valida" << endl;
-        }
-        void sumaMatrices(Matriz<T>&a, Matriz<U>&b) {
-            for (int i=0; i<a.filas; ++i){
-                for (int j=0; j<a.columnas; ++j) {
-                    cout << a.matriz[i][j] + b.matriz[i][j] << " ";
+        void mostrarMatriz(){
+            for (int i=0; i<filas; ++i){
+                for (int j=0; j<columnas; ++j) {
+                    cout << matriz[i][j] << " ";
                 }
                 cout << endl;
             }
         }
-        void restarMatrices(Matriz<T>&a, Matriz<U>&b) {
-            for (int i=0; i<a.filas; ++i){
-                for (int j=0; j<a.columnas; ++j) {
-                    cout << a.matriz[i][j] - b.matriz[i][j] << " ";
-                }
-                cout << endl;
-            }
+        Matriz operator+ (const Matriz<T>a) {
+            vector<vector<T>> matrizA = a.matriz;
+            OperacionesBasicas<T> operacionesBasicas;
+            operacionesBasicas.validarSumaResta(matriz, matrizA);
+            Matriz<T> resultado(filas, columnas, true);
+            resultado.matriz = operacionesBasicas.sumaMatrices(matriz, matrizA);
+            return resultado;
         }
-        void multiplicarMatrices(Matriz<T>&a, Matriz<U>&b) {
-            vector<vector<T>> result(a.filas, b.columnas);
-            for (int i = 0; i < a.filas; ++i) {
-                for (int j = 0; j < b.columnas; ++j) {
-                    for (int k = 0; k < a.columnas; ++k) {
-                        result[i][j] += a.matriz[i][k] * b.matriz[k][j];
-                    }
-                    cout << result[i][j] << " ";
-                }
-                cout << endl;
-            }
+        Matriz operator- (const Matriz<T>a) {
+            OperacionesBasicas<T> operacionesBasicas;
+            vector<vector<T>> matrizA = a.matriz;
+            operacionesBasicas.validarSumaResta(matriz, matrizA);
+            Matriz<T> resultado(filas, columnas, true);
+            resultado.matriz = operacionesBasicas.restaMatrices(matriz, matrizA);
+            return resultado;
+        }
+        Matriz operator* (const Matriz<T>a) {
+            vector<vector<T>> matrizA = a.matriz;
+            OperacionesBasicas<T> operacionesBasicas;
+            operacionesBasicas.validarMultiplicacion(matriz, matrizA);
+            Matriz<T> resultado(a.filas, columnas, true);
+            resultado.matriz = operacionesBasicas.multiplicarMatrices(matriz, matrizA);
+            return resultado;
         }
 };
 
 // Clase ValidadorDeEntrada
+class ValidadorDeEntrada {
+    public:
+        void validarTipoDato(string input) {
+            if (input == "int" || input == "float" || input == "std::complex") {
+                cout << "Valor correcto" << endl;
+            }
 
+        }
+         void validarDimensiones(int tamano) {
+            if (tamano <= 0) {
+                cout << "Valor incorrecto" << endl;
+            }
+        }
+};
+
+
+enum Opciones {
+    TIPODATO = 1,
+    PROPIEDADES,
+    OPERACION,
+    DATOSALEATORIOS,
+    MOSTRAR,
+    EJECUTAR,
+    EXIT
+};
+
+enum TIPO {
+    INT = 1,
+    FLOAT,
+    COMPLEX
+};
+
+enum Operaciones {
+    SUMA = 1,
+    RESTA,
+    MULTIPLICACION
+};
 
 // Menu
 int main() {
-    Matriz<int> test;
+    Matriz<int> aInt;
+    Matriz<int> bInt;
+    Matriz<float> aFloat;
+    Matriz<float> bFloat;
+    Matriz<std::complex<double>> aComplex;
+    Matriz<std::complex<double>> bComplex;
+    int tipo = 0;
+    int operacion = 0;
+    int opcion = 0;
+    bool exit = false;
+    while(!exit){
+        cout << endl << "///// Contactos /////" << endl;
+        cout << "1. Ingresar el tipo de datos de las matrices" << endl;
+        cout << "2. Ingresar tamano y valores de las matrices" << endl;
+        cout << "3. Ingresar la operacion que se desea realizar" << endl;
+        cout << "4. Generar datos aleatorios para las matrices" << endl;
+        cout << "5. Mostrar las matrices ingresadas" << endl;
+        cout << "6. Ejecutar la operacion ingresada" << endl;
+        cout << "7. Salir del programa" << endl;
+        
+        cout << "Ingrese su opcion: ";
+        cin >> opcion;
+        switch (opcion) {
+            case TIPODATO:
+                cout << endl;
+                cout << "Tipos de datos disponibles: " << endl;
+                cout << "1. int" << endl;
+                cout << "2. float" << endl;
+                cout << "3. std::complex" << endl;
+                cout << "Ingrese su opcion: ";
+                cin >> tipo;
+                break;
+            case PROPIEDADES:
+                cout << endl;
+                if (tipo = INT) {
+                    aInt.setDimensiones();
+                    aInt.llenarMatriz();
+                    bInt.setDimensiones();
+                    bInt.llenarMatriz();
+                } else if (tipo = FLOAT) {
+                    aFloat.setDimensiones();
+                    aFloat.llenarMatriz();
+                    bFloat.setDimensiones();
+                    bFloat.llenarMatriz();
+                } else if (tipo = COMPLEX) {
+                    aComplex.setDimensiones();
+                    aComplex.llenarMatriz();
+                    aComplex.setDimensiones();
+                    aComplex.llenarMatriz();
+                } else {
+                    cout << endl << "Opcion incorrecta" << endl;
+                }
+                break;
+            case OPERACION:
+                cout << endl;
+                cout << "Tipos de operaciones disponibles: " << endl;
+                cout << "1. Suma" << endl;
+                cout << "2. Resta" << endl;
+                cout << "3. Multiplicacion" << endl;
+                cout << "Ingrese su opcion: ";
+                cin >> operacion;
+                if (operacion != SUMA && operacion != RESTA && operacion != MULTIPLICACION)
+                    cout << endl << "Opcion incorrecta" << endl;
+                break;
+            case DATOSALEATORIOS:
+                cout << endl;
+                if (tipo = INT) {
+                    aInt.llenarMatrizAleatorio();
+                    bInt.llenarMatrizAleatorio();
+                } else if (tipo = FLOAT) {
+                    aFloat.llenarMatrizAleatorio();
+                    bFloat.llenarMatrizAleatorio();
+                } else if (tipo = COMPLEX) {
+                    aComplex.llenarMatrizAleatorio();
+                    aComplex.llenarMatrizAleatorio();
+                } else {
+                    cout << endl << "Opcion incorrecta" << endl;
+                }
+                
+                break;
+            case MOSTRAR:
+                cout << endl;
+                if (tipo = INT) {
+                    cout << "Matriz A: " << endl;
+                    aInt.mostrarMatriz();
+                    cout << "Matriz B: " << endl;
+                    bInt.mostrarMatriz();
+                } else if (tipo = FLOAT) {
+                    cout << "Matriz A: " << endl;
+                    aFloat.mostrarMatriz();
+                    cout << "Matriz B: " << endl;
+                    bFloat.mostrarMatriz();
+                } else if (tipo = COMPLEX) {
+                    cout << "Matriz A: " << endl;
+                    aComplex.mostrarMatriz();
+                    cout << "Matriz B: " << endl;
+                    aComplex.mostrarMatriz();
+                } else {
+                    cout << endl << "Opcion incorrecta" << endl;
+                }
+                break;
+            case EJECUTAR:
+                cout << endl;
+                break;
+            case EXIT:
+                cout << endl;
+                cout << "Saliendo del programa" << endl;
+                exit = true;
+                break;
+            default:
+                cout << endl << "Opcion incorrecta" << endl;
+                break;
+        };
+    
+    };
+    
 
     return 0;
 }
