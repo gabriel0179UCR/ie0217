@@ -50,12 +50,13 @@ class Matriz {
 template <typename T, typename U>
 class OperacionesBasicas {
     public:
-        bool validarSumaResta(Matriz<T>&a, Matriz<U>&b) {
-            if (a.filas == b.filas && a.columnas == b.columnas) {
-                return true;
-            } else {
-                return false;
-            }
+        void validarSumaResta(Matriz<T>&a, Matriz<U>&b) {
+            if (a.filas == b.filas && a.columnas == b.columnas)
+                cout << "Suma o resta valida" << endl;
+        }
+        void validarMultiplicacion(Matriz<T>&a, Matriz<U>&b) {
+            if (a.columnas == b.filas)
+                cout << "Multiplicacion valida" << endl;
         }
 };
 
