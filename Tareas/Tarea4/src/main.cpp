@@ -6,7 +6,8 @@ using namespace std;
 template <typename T>
 class Matriz {
     public:
-
+        int filas;
+        int columnas;
         Matriz() {
             cout << "Ingrese el numero de filas: ";
             int _filas;
@@ -42,13 +43,21 @@ class Matriz {
         }
 
     private:
-        int filas;
-        int columnas;
         vector<vector<T>> matriz;
 };
 
 // Clase OperacionesBasicas
-
+template <typename T, typename U>
+class OperacionesBasicas {
+    public:
+        bool validarSumaResta(Matriz<T>&a, Matriz<U>&b) {
+            if (a.filas == b.filas && a.columnas == b.columnas) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+};
 
 // Clase ValidadorDeEntrada
 
@@ -56,10 +65,6 @@ class Matriz {
 // Menu
 int main() {
     Matriz<int> test;
-    //test.setDimensiones(2,2);
-    //test.llenarMatriz();
-
-
 
     return 0;
 }
