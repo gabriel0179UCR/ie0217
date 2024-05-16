@@ -1,0 +1,43 @@
+\doxysection{Regular\+Expressions.\+hpp}
+\hypertarget{_regular_expressions_8hpp_source}{}\label{_regular_expressions_8hpp_source}\index{src/RegularExpressions.hpp@{src/RegularExpressions.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ REGULAREXPRESSIONS\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ REGULAREXPRESSIONS\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ Expresiones\ regulares\ utilizadas}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ Nota:\ Las\ expresiones\ funcionan\ a\ la\ inversa,\ hacen\ match\ cuando\ se\ identifica\ la\ prohibicion}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ Identifica\ si\ esta\ el\ arroba}}
+\DoxyCodeLine{00011\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ NOT\_AT\_CHARACTER\ =\ \textcolor{stringliteral}{"{}\string^[\string^@]+\$"{}};}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ Identifica\ los\ caracteres\ permitidos\ (minusculas,\ mayusculas,\ punto,\ guio\ y\ guion\ bajo)}}
+\DoxyCodeLine{00014\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ NOT\_CHARACTERS\_ALLOW\ =\ \ \textcolor{stringliteral}{"{}[\string^a-\/zA-\/Z0-\/9\(\backslash\)\(\backslash\).-\/\_]"{}};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ Identifica\ si\ hay\ un\ punto\ al\ inicio\ o\ al\ final}}
+\DoxyCodeLine{00017\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ NOT\_STARTFINAL\_POINT\ =\ \textcolor{stringliteral}{"{}\string^\string^\(\backslash\)\(\backslash\).|\(\backslash\)\(\backslash\).\$"{}};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ Ayuda\ para\ contar\ el\ numero\ de\ caracteres\ para\ el\ nombre}}
+\DoxyCodeLine{00020\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ COUNT\_CHARACTERS\_NAME\ =\ \textcolor{stringliteral}{"{}[\string^\(\backslash\)\(\backslash\).-\/]"{}};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ Identifica\ los\ caracteres\ especiales\ consecutivos}}
+\DoxyCodeLine{00023\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ NOT\_CONSECUTIVE\_SPECIAL\_CHARACTERS\ =\ \textcolor{stringliteral}{"{}\string^[\string^a-\/zA-\/Z0-\/9]\{2\}+\$"{}};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ Identifica\ si\ solo\ hay\ letras\ (exceptuando\ el\ punto)}}
+\DoxyCodeLine{00026\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ NOT\_LETTERS\ =\ \textcolor{stringliteral}{"{}[\string^a-\/zA-\/Z\(\backslash\)\(\backslash\).]"{}};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{comment}{//\ Identifica\ si\ no\ hay\ puntos}}
+\DoxyCodeLine{00029\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ POINT\_NUMBER\ =\ \textcolor{stringliteral}{"{}\string^[\string^\(\backslash\)\(\backslash\).]+\$"{}};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{comment}{//\ Ayuda\ para\ contar\ el\ numero\ de\ caracteres\ para\ el\ dominio\ y\ extension}}
+\DoxyCodeLine{00032\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ COUNT\_CHARACTERS\_DOMAIN\ =\ \textcolor{stringliteral}{"{}[\string^\(\backslash\)\(\backslash\).]"{}};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{comment}{//\ Identifica\ puntos\ consecutivos}}
+\DoxyCodeLine{00035\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ NOT\_CONSECUTIVE\_POINTS\ =\ \textcolor{stringliteral}{"{}\(\backslash\)\(\backslash\).\{2,\}"{}};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ REGULAREXPRESSIONS\_HPP}}
+
+\end{DoxyCode}

@@ -1,0 +1,90 @@
+\chapter{Parte Practica}
+\hypertarget{index}{}\label{index}\index{Parte Practica@{Parte Practica}}
+\label{index_md_src_2_r_e_a_d_m_e}%
+\Hypertarget{index_md_src_2_r_e_a_d_m_e}%
+ \hypertarget{index_autotoc_md1}{}\doxysection{\texorpdfstring{Programa que valida el formato de un correo electronico.}{Programa que valida el formato de un correo electronico.}}\label{index_autotoc_md1}
+\hypertarget{index_autotoc_md2}{}\doxysection{\texorpdfstring{Compilacion y ejecucion}{Compilacion y ejecucion}}\label{index_autotoc_md2}
+
+\begin{DoxyItemize}
+\item Nota\+: Para la compilacion y ejecucion se hace uso de un archivo Makefile.
+\end{DoxyItemize}
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Commando   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Funcion    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Commando   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Funcion    }\\\cline{1-2}
+\endhead
+mingw32-\/make clean   &Limpia el directorio de archivos compilados    \\\cline{1-2}
+mingw32-\/make build   &Compila el programa    \\\cline{1-2}
+mingw32-\/make run   &Ejecuta el programa    \\\cline{1-2}
+mingw32-\/make all   &Compila y corre el programa   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{index_autotoc_md3}{}\doxysection{\texorpdfstring{Archivos}{Archivos}}\label{index_autotoc_md3}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Archivo   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Funcion    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Archivo   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Funcion    }\\\cline{1-2}
+\endhead
+main.\+cpp   &Llamado del programa, contiene el menu    \\\cline{1-2}
+Validar\+Email.\+hpp   &Declaracion de la clase \doxylink{class_validador_email}{Validador\+Email} y sus metodos.    \\\cline{1-2}
+Validador\+Email.\+cpp   &Definicion de la clase \doxylink{class_validador_email}{Validador\+Email} y sus metodos.    \\\cline{1-2}
+\doxylink{_regular_expressions_8hpp_source}{Regular\+Expressions.\+hpp}   &Definicion de las expresiones regulares utilizadas.    \\\cline{1-2}
+\doxylink{_exceptions_8hpp_source}{Exceptions.\+hpp}   &Definicion de los mensajes para cada excepcion manejada.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{index_autotoc_md4}{}\doxysection{\texorpdfstring{Parte Teorica -\/ Expresiones regulares}{Parte Teorica -\/ Expresiones regulares}}\label{index_autotoc_md4}
+\hypertarget{index_autotoc_md5}{}\doxysubsubsection{\texorpdfstring{1. Â¿\+Que es una expresion regular y cual es su proposito en programacion?}{1. Â¿\+Que es una expresion regular y cual es su proposito en programacion?}}\label{index_autotoc_md5}
+Patrones utilizados para buscar y manipular cadenas de texto de una manera mÃ¡s flexible y poderosa. Permiten realizar bÃºsquedas de patrones dentro de texto, validar cadenas, realizar sustituciones y mucho mÃ¡s \hypertarget{index_autotoc_md6}{}\doxysubsubsection{\texorpdfstring{2. Â¿\+Que significan los caracteres especiales . y \texorpdfstring{$\ast$}{*} en una expresion regular?}{2. Â¿\+Que significan los caracteres especiales . y \texorpdfstring{$\ast$}{*} en una expresion regular?}}\label{index_autotoc_md6}
+El punto coincide con cualquier carÃ¡cter, excepto un salto de lÃ­nea. El asterisco representa cero o mÃ¡s repeticiones del elemento anterior. \hypertarget{index_autotoc_md7}{}\doxysubsubsection{\texorpdfstring{3. Â¿\+Como se pueden agrupar subexpresiones en una expresion regular?}{3. Â¿\+Como se pueden agrupar subexpresiones en una expresion regular?}}\label{index_autotoc_md7}
+Los parentesis se utilizan para agrupar elementos en subexpresiones. \hypertarget{index_autotoc_md8}{}\doxysubsubsection{\texorpdfstring{4. Â¿\+Que funcion cumple la barra invertida \textbackslash{} en una expresion regular?}{4. Â¿\+Que funcion cumple la barra invertida \textbackslash{} en una expresion regular?}}\label{index_autotoc_md8}
+Se utiliza para buscar un carÃ¡cter especial de expresiÃ³n regular como un carÃ¡cter literal. \hypertarget{index_autotoc_md9}{}\doxysubsubsection{\texorpdfstring{5. Explique como se pueden capturar coincidencias usando parentesis en una expresion regular.}{5. Explique como se pueden capturar coincidencias usando parentesis en una expresion regular.}}\label{index_autotoc_md9}
+La expresion dentro de los parantesis es la que va a ser capturada. Por ejemplo, (ab)+ coincidirÃ¡ con "{}ab"{}, "{}abab"{}, "{}ababab"{}, etc., y capturarÃ¡ "{}ab"{} como grupo coincidente. \hypertarget{index_autotoc_md10}{}\doxysubsubsection{\texorpdfstring{6. Â¿\+Cual es la diferencia entre \textbackslash{}d y \textbackslash{}D en una expresion regular?}{6. Â¿\+Cual es la diferencia entre \textbackslash{}d y \textbackslash{}D en una expresion regular?}}\label{index_autotoc_md10}
+La expresion \textbackslash{}d va a hacer match con solo digito. Al contrario, la expresion \textbackslash{}D va a hacer match con no-\/digitos. \hypertarget{index_autotoc_md11}{}\doxysubsubsection{\texorpdfstring{7. Â¿\+Como se representa una clase de caracteres en una expresion regular?}{7. Â¿\+Como se representa una clase de caracteres en una expresion regular?}}\label{index_autotoc_md11}
+Una clase de caracteres se representa con los corchetes (\mbox{[}\mbox{]}). La expresion dentro de los corchetes va a representar una clase de caracteres a coincidir. \hypertarget{index_autotoc_md12}{}\doxysubsubsection{\texorpdfstring{8. Â¿\+Cual es el proposito del modificador \$ en una expresion regular?}{8. Â¿\+Cual es el proposito del modificador \$ en una expresion regular?}}\label{index_autotoc_md12}
+Se encarga de hacer match con el ultimo caracter. \hypertarget{index_autotoc_md13}{}\doxysubsubsection{\texorpdfstring{9. Describa como validar una direccion de correo electronico usando expresiones regulares en C++.}{9. Describa como validar una direccion de correo electronico usando expresiones regulares en C++.}}\label{index_autotoc_md13}
+Una direccion de correo se puede validar usando expresiones regulares al tomar en consideracion el formato que debe de seguir el correo. Por ejemplo, si la extension del correo solo debe tener letras minusculas, se realiza una expresion para que haga match cuando solo se presenten letras minusculas y de esta forma revisar el formato del correo. \hypertarget{index_autotoc_md14}{}\doxysubsubsection{\texorpdfstring{10. Discuta las implicaciones de rendimiento de utilizar expresiones regulares en aplicaciones de software. Â¿\+Que tecnicas se pueden aplicar para optimizar una expresion regular compleja, especialmente en contextos donde el tiempo de ejecucion es critico?}{10. Discuta las implicaciones de rendimiento de utilizar expresiones regulares en aplicaciones de software. Â¿\+Que tecnicas se pueden aplicar para optimizar una expresion regular compleja, especialmente en contextos donde el tiempo de ejecucion es critico?}}\label{index_autotoc_md14}
+Para poder optimizar una expresion regular compleja la principal mejora es la de simplificar la expresion. En caso de que no se pueda simplificar la expresion, se puede buscar alternativas de aplicacion fuera del uso de expresiones regulares (quitarle peso a la expresion). \hypertarget{index_autotoc_md15}{}\doxysubsubsection{\texorpdfstring{11. Â¿\+Que es un Makefile y cual es su funcion en un proyecto de C++?}{11. Â¿\+Que es un Makefile y cual es su funcion en un proyecto de C++?}}\label{index_autotoc_md15}
+Los Makefile se utilizan para ayudar a decidir quÃ© partes de un programa grande deben volver a compilarse. En la gran mayorÃ­a de los casos, se compilan archivos C o C++. \hypertarget{index_autotoc_md16}{}\doxysubsubsection{\texorpdfstring{12. Â¿\+Cual es la diferencia entre una regla implicita y una regla explicita en un Makefile?}{12. Â¿\+Cual es la diferencia entre una regla implicita y una regla explicita en un Makefile?}}\label{index_autotoc_md16}
+Una regla implicita es una regla que se aplica directamente en el llamado basico del Makefile, mientras que una regla explicita debe ser llamada manualmente. \hypertarget{index_autotoc_md17}{}\doxysubsubsection{\texorpdfstring{13. Explique el proposito de las macros (variables) en un Makefile.}{13. Explique el proposito de las macros (variables) en un Makefile.}}\label{index_autotoc_md17}
+Los Makefiles pueden usar variables para almacenar valores que se utilizan en varias partes del archivo. Esto facilita la modificaciÃ³n y personalizaciÃ³n del Makefile sin tener que cambiar cada instancia de un valor en todo el archivo \hypertarget{index_autotoc_md18}{}\doxysubsubsection{\texorpdfstring{14. Â¿\+Que es un objetivo (target) en un Makefile y como se define?}{14. Â¿\+Que es un objetivo (target) en un Makefile y como se define?}}\label{index_autotoc_md18}
+Las reglas son instrucciones que dicen cÃ³mo crear un target a partir de un conjunto de archivos fuente. Cada regla consta de tres partes\+: un target, una lista de dependencias y comandos para construir el target. Los targets son los resultados que se desean obtener al ejecutar el Makefile. Por ejemplo, un target podrÃ­a ser compilar un programa o limpiar archivos generados previamente. Los targets son las reglas que definirÃ¡s en tu Makefile. \hypertarget{index_autotoc_md19}{}\doxysubsubsection{\texorpdfstring{15. Â¿\+Por que es util dividir un proyecto de C++ en multiples archivos fuente y como ayuda el uso de Makefiles en este enfoque?}{15. Â¿\+Por que es util dividir un proyecto de C++ en multiples archivos fuente y como ayuda el uso de Makefiles en este enfoque?}}\label{index_autotoc_md19}
+Para generar un programa mas legible y facil de dar soporte. \hypertarget{index_autotoc_md20}{}\doxysubsubsection{\texorpdfstring{16. Â¿\+Como se pueden definir dependencias entre los archivos fuente en un Makefile?}{16. Â¿\+Como se pueden definir dependencias entre los archivos fuente en un Makefile?}}\label{index_autotoc_md20}
+Los comandos son las instrucciones que Make debe seguir para construir un target a partir de sus dependencias. Los comandos deben comenzar con una tabulaciÃ³n (no espacios) y deben estar en la misma lÃ­nea que la regla.\hypertarget{index_autotoc_md21}{}\doxysubsubsection{\texorpdfstring{17. Explique como se puede compilar un proyecto en diferentes sistemas operativos usando un solo Makefile.}{17. Explique como se puede compilar un proyecto en diferentes sistemas operativos usando un solo Makefile.}}\label{index_autotoc_md21}
+Se puede agregar una condicional dentro del Makefile que dependiendo del sistema operativo utilizado se cambie el formato de las banderas CC, CFLAGS, CXXFLAGS y LDFLAGS.\hypertarget{index_autotoc_md22}{}\doxysubsubsection{\texorpdfstring{18. Â¿\+Cual es el proposito de los comandos clean y all en un Makefile?}{18. Â¿\+Cual es el proposito de los comandos clean y all en un Makefile?}}\label{index_autotoc_md22}
+Clean es un phony target clÃ¡sico que se utiliza para eliminar archivos generados. All es un phony que permite ejecutar todo lo que hay en un Makefile, incluyendo los .PHONY. \hypertarget{index_autotoc_md23}{}\doxysubsubsection{\texorpdfstring{19. Describa como se pueden pasar argumentos desde la linea de comandos a un Makefile.}{19. Describa como se pueden pasar argumentos desde la linea de comandos a un Makefile.}}\label{index_autotoc_md23}
+\hypertarget{index_autotoc_md24}{}\doxysubsubsection{\texorpdfstring{20. Proporcione un ejemplo de una regla en un Makefile que compile un archivo fuente .cpp a un archivoÂ objetoÂ .\+o.}{20. Proporcione un ejemplo de una regla en un Makefile que compile un archivo fuente .cpp a un archivoÂ objetoÂ .\+o.}}\label{index_autotoc_md24}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{output.o:\ input.cpp}
+\DoxyCodeLine{\ \ \ \ \$(CC)\ \$(CFLAGS)\ -\/o\ \$@\ \$<}
+
+\end{DoxyCode}
+ \hypertarget{index_autotoc_md25}{}\doxysection{\texorpdfstring{Parte Teorica -\/ Makefile}{Parte Teorica -\/ Makefile}}\label{index_autotoc_md25}
+\hypertarget{index_autotoc_md26}{}\doxysubsubsection{\texorpdfstring{1. Â¿\+Que suelen contener las variables CC, CFLAGS, CXXFLAGS y LDFLAGS en un makefile?}{1. Â¿\+Que suelen contener las variables CC, CFLAGS, CXXFLAGS y LDFLAGS en un makefile?}}\label{index_autotoc_md26}
+Suelen contener los tags de los compiladores. Por ejemplo, CC contiene normalmente g++. \hypertarget{index_autotoc_md27}{}\doxysubsubsection{\texorpdfstring{2. Â¿\+De que se compone una regla en un Makefile?}{2. Â¿\+De que se compone una regla en un Makefile?}}\label{index_autotoc_md27}
+Una regla se compone del target, la dependencia y el comando a realizar. Posee la siguiente estructura. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{target:\ dependency}
+\DoxyCodeLine{\ \ \ \ \ commands}
+
+\end{DoxyCode}
+ \hypertarget{index_autotoc_md28}{}\doxysubsubsection{\texorpdfstring{3. Defina que es un target y como se relaciona con sus prerequisitos.}{3. Defina que es un target y como se relaciona con sus prerequisitos.}}\label{index_autotoc_md28}
+Los targets son los resultados que se desean obtener al ejecutar el Makefile. Por ejemplo, un target podrÃ­a ser compilar un programa o limpiar archivos generados previamente. Los targets son las reglas que definirÃ¡s en tu Makefile. Estos targets son creados por las reglas. \hypertarget{index_autotoc_md29}{}\doxysubsubsection{\texorpdfstring{4. Â¿\+Para que se utiliza la bandera-\/I,-\/c y-\/o del compilador gcc?}{4. Â¿\+Para que se utiliza la bandera-\/I,-\/c y-\/o del compilador gcc?}}\label{index_autotoc_md29}
+La bandera -\/I indica al compilador que busque headers en el directorio especificado. La bandera -\/c le indica al compilador que compile el archivo fuente a un archivo objetivo. La bandera -\/o le indica al compilador el archivo que se va a crear a partir de la compilacion. \hypertarget{index_autotoc_md30}{}\doxysubsubsection{\texorpdfstring{5. Â¿\+Como se definen y se utilizan las variables en un Makefile? Â¿\+Que utilidad tienen?}{5. Â¿\+Como se definen y se utilizan las variables en un Makefile? Â¿\+Que utilidad tienen?}}\label{index_autotoc_md30}
+Una variable se puede definir de la siguiente forma\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{variable\ =\ valor}
+
+\end{DoxyCode}
+ Esto permite hacer el codigo del Makefile mas modular y adaptativo. \hypertarget{index_autotoc_md31}{}\doxysubsubsection{\texorpdfstring{6. Â¿\+Que utilidad tiene un @ en un Makefile?}{6. Â¿\+Que utilidad tiene un @ en un Makefile?}}\label{index_autotoc_md31}
+Un @ se utiliza para suprimir la salida del comando que se ejecuta. \hypertarget{index_autotoc_md32}{}\doxysubsubsection{\texorpdfstring{7. Â¿\+Para que se utiliza .PHONY en un Makefile?}{7. Â¿\+Para que se utiliza .PHONY en un Makefile?}}\label{index_autotoc_md32}
+El .PHONY permite declarar aquellas reglas que no corresponden a un archivo propiamente. 

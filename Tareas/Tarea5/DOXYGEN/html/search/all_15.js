@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['para_20optimizar_20una_20expresion_20regular_20compleja_20especialmente_20en_20contextos_20donde_20el_20tiempo_20de_20ejecucion_20es_20critico_0',['10. Discuta las implicaciones de rendimiento de utilizar expresiones regulares en aplicaciones de software. Â¿Que tecnicas se pueden aplicar para optimizar una expresion regular compleja, especialmente en contextos donde el tiempo de ejecucion es critico?',['../index.html#autotoc_md14',1,'']]],
+  ['parentesis_20en_20una_20expresion_20regular_1',['5. Explique como se pueden capturar coincidencias usando parentesis en una expresion regular.',['../index.html#autotoc_md9',1,'']]],
+  ['parte_20practica_2',['Parte Practica',['../index.html',1,'']]],
+  ['parte_20teorica_20expresiones_20regulares_3',['Parte Teorica - Expresiones regulares',['../index.html#autotoc_md4',1,'']]],
+  ['parte_20teorica_20makefile_4',['Parte Teorica - Makefile',['../index.html#autotoc_md25',1,'']]],
+  ['pasar_20argumentos_20desde_20la_20linea_20de_20comandos_20a_20un_20makefile_5',['19. Describa como se pueden pasar argumentos desde la linea de comandos a un Makefile.',['../index.html#autotoc_md23',1,'']]],
+  ['phony_20en_20un_20makefile_6',['7. Â¿Para que se utiliza .PHONY en un Makefile?',['../index.html#autotoc_md32',1,'']]],
+  ['practica_7',['Parte Practica',['../index.html',1,'']]],
+  ['prerequisitos_8',['3. Defina que es un target y como se relaciona con sus prerequisitos.',['../index.html#autotoc_md28',1,'']]],
+  ['programa_20que_20valida_20el_20formato_20de_20un_20correo_20electronico_9',['Programa que valida el formato de un correo electronico.',['../index.html#autotoc_md1',1,'']]],
+  ['programacion_10',['1.  Â¿Que es una expresion regular y cual es su proposito en programacion?',['../index.html#autotoc_md5',1,'']]],
+  ['proporcione_20un_20ejemplo_20de_20una_20regla_20en_20un_20makefile_20que_20compile_20un_20archivo_20fuente_20cpp_20a_20un_20archivoâ objetoâ _20o_11',['20. Proporcione un ejemplo de una regla en un Makefile que compile un archivo fuente .cpp a un archivoÂ objetoÂ .o.',['../index.html#autotoc_md24',1,'']]],
+  ['proposito_20de_20las_20macros_20variables_20en_20un_20makefile_12',['13. Explique el proposito de las macros (variables) en un Makefile.',['../index.html#autotoc_md17',1,'']]],
+  ['proposito_20de_20los_20comandos_20clean_20y_20all_20en_20un_20makefile_13',['18. Â¿Cual es el proposito de los comandos clean y all en un Makefile?',['../index.html#autotoc_md22',1,'']]],
+  ['proposito_20del_20modificador_20_24_20en_20una_20expresion_20regular_14',['8. Â¿Cual es el proposito del modificador $ en una expresion regular?',['../index.html#autotoc_md12',1,'']]],
+  ['proposito_20en_20programacion_15',['1.  Â¿Que es una expresion regular y cual es su proposito en programacion?',['../index.html#autotoc_md5',1,'']]],
+  ['proyecto_20de_20c_16',['11. Â¿Que es un Makefile y cual es su funcion en un proyecto de C++?',['../index.html#autotoc_md15',1,'']]],
+  ['proyecto_20de_20c_20en_20multiples_20archivos_20fuente_20y_20como_20ayuda_20el_20uso_20de_20makefiles_20en_20este_20enfoque_17',['15. Â¿Por que es util dividir un proyecto de C++ en multiples archivos fuente y como ayuda el uso de Makefiles en este enfoque?',['../index.html#autotoc_md19',1,'']]],
+  ['proyecto_20en_20diferentes_20sistemas_20operativos_20usando_20un_20solo_20makefile_18',['17. Explique como se puede compilar un proyecto en diferentes sistemas operativos usando un solo Makefile.',['../index.html#autotoc_md21',1,'']]],
+  ['puede_20compilar_20un_20proyecto_20en_20diferentes_20sistemas_20operativos_20usando_20un_20solo_20makefile_19',['17. Explique como se puede compilar un proyecto en diferentes sistemas operativos usando un solo Makefile.',['../index.html#autotoc_md21',1,'']]],
+  ['pueden_20agrupar_20subexpresiones_20en_20una_20expresion_20regular_20',['3. Â¿Como se pueden agrupar subexpresiones en una expresion regular?',['../index.html#autotoc_md7',1,'']]],
+  ['pueden_20aplicar_20para_20optimizar_20una_20expresion_20regular_20compleja_20especialmente_20en_20contextos_20donde_20el_20tiempo_20de_20ejecucion_20es_20critico_21',['10. Discuta las implicaciones de rendimiento de utilizar expresiones regulares en aplicaciones de software. Â¿Que tecnicas se pueden aplicar para optimizar una expresion regular compleja, especialmente en contextos donde el tiempo de ejecucion es critico?',['../index.html#autotoc_md14',1,'']]],
+  ['pueden_20capturar_20coincidencias_20usando_20parentesis_20en_20una_20expresion_20regular_22',['5. Explique como se pueden capturar coincidencias usando parentesis en una expresion regular.',['../index.html#autotoc_md9',1,'']]],
+  ['pueden_20definir_20dependencias_20entre_20los_20archivos_20fuente_20en_20un_20makefile_23',['16. Â¿Como se pueden definir dependencias entre los archivos fuente en un Makefile?',['../index.html#autotoc_md20',1,'']]],
+  ['pueden_20pasar_20argumentos_20desde_20la_20linea_20de_20comandos_20a_20un_20makefile_24',['19. Describa como se pueden pasar argumentos desde la linea de comandos a un Makefile.',['../index.html#autotoc_md23',1,'']]]
+];

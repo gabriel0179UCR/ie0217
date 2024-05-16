@@ -1,0 +1,28 @@
+\doxysection{Exceptions.\+hpp}
+\hypertarget{_exceptions_8hpp_source}{}\label{_exceptions_8hpp_source}\index{src/Exceptions.hpp@{src/Exceptions.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ EXCEPTIONS\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ EXCEPTIONS\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ ERROR\_EMAIL\ =\ \textcolor{stringliteral}{"{}ERROR\ -\/>\ Email:\ "{}};}
+\DoxyCodeLine{00009\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ ERROR\_NAME\ =\ \textcolor{stringliteral}{"{}ERROR\ -\/>\ Nombre:\ "{}};}
+\DoxyCodeLine{00010\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ ERROR\_DOMAIN\ =\ \textcolor{stringliteral}{"{}ERROR\ -\/>\ Dominio:\ "{}};}
+\DoxyCodeLine{00011\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ ERROR\_EXTENSION\ =\ \textcolor{stringliteral}{"{}ERROR\ -\/>\ Extension:\ "{}};}
+\DoxyCodeLine{00012\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ ERROR\_FORMAT\_EMAIL\ =\ \textcolor{stringliteral}{"{}Se\ debe\ seguir\ el\ formato\ nombre@dominio.extension"{}};}
+\DoxyCodeLine{00013\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ ERROR\_INVALID\_CHARACTER\_NAME\ =\ \textcolor{stringliteral}{"{}Se\ encuentran\ caracteres\ invalidos.\ Caracteres\ admitidos;\ letras\ mayusculas\ y\ minusculas,\ numeros,\ .,\ -\/,\ y\ \_"{}};}
+\DoxyCodeLine{00014\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ ERROR\_INVALID\_CHARACTER\_DOMAIN\ =\ \textcolor{stringliteral}{"{}Se\ presentan\ caracteres\ diferentes\ de\ letras."{}};}
+\DoxyCodeLine{00015\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ ERROR\_START\_END\_POINT\ =\ \textcolor{stringliteral}{"{}Se\ encuentran\ puntos\ al\ inicio\ y/o\ final."{}};}
+\DoxyCodeLine{00016\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ ERROR\_MAX\_CHARACTER\_NAME\ =\ \textcolor{stringliteral}{"{}El\ maximo\ de\ caracteres\ son\ 15."{}};}
+\DoxyCodeLine{00017\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ ERROR\_MAX\_CHARACTER\_DOMAIN\ =\ \textcolor{stringliteral}{"{}El\ maximo\ de\ caracteres\ son\ 30\ y\ minimo\ son\ 3."{}};}
+\DoxyCodeLine{00018\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ ERROR\_MAX\_CHARACTER\_EXTENSION\ =\ \textcolor{stringliteral}{"{}El\ maximo\ de\ caracteres\ son\ 6\ y\ minimo\ son\ 2."{}};}
+\DoxyCodeLine{00019\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ ERROR\_CONSECUTIVE\_CHARACTERS\_NAME\ =\ \textcolor{stringliteral}{"{}No\ se\ pueden\ tener\ caracteres\ especiales\ consecutivos."{}};}
+\DoxyCodeLine{00020\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ ERROR\_CONSECUTIVE\_CHARACTERS\_DOMAIN\_EXTENSION\ =\ \textcolor{stringliteral}{"{}No\ se\ pueden\ tener\ puntos\ consecutivos."{}};}
+\DoxyCodeLine{00021\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ ERROR\_NO\_POINTS\ =\ \textcolor{stringliteral}{"{}Se\ debe\ presentar\ al\ menos\ un\ punto."{}};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//EXCEPTIONS\_HPP}}
+
+\end{DoxyCode}
