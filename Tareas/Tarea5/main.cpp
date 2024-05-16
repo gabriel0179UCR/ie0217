@@ -17,13 +17,56 @@ std::string NOT_CONSECUTIVE_POINTS = "\\.{2,}";
 
 class ValidadorEmail {
     public:
-        //bool validarCorreo(std::string email);
+        bool validarCorreo(std::string email);
     
-    //private:
+    private:
         bool validarNombre(std::string nombre);
         bool validarDominio(std::string dominio);
         bool validarExtension(std::string extension);
 };
+
+bool ValidadorEmail::validarCorreo(std::string email) {
+    size_t dash = email.find('@');
+    std::string nombre = email.substr(0, dash);
+    std::string dominioAndExtension = email.substr(dash + 1);
+    std::string betweenPoints;
+    std::vector<std::string> parts;
+    size_t pos = 0;
+    std::string token;
+    while ((pos = dominioAndExtension.find(".")) != std::string::npos) {
+        token = dominioAndExtension.substr(0, pos);
+        parts.push_back(token);
+        dominioAndExtension.erase(0, pos + 1);
+    }
+    parts.push_back(dominioAndExtension);
+
+    std::string dominio;
+    std::string extension;
+    int size = parts.size();
+    if (size < 2) {;
+        return 0; // ERROR
+    } else if (size == 2) {
+        dominio = parts[0];
+        extension = parts[1];
+    } else {
+        if (parts[size-1].length()+parts[size-2].length() > 6) {
+            extension = parts[size-1];
+        } else {
+            extension = parts[size-2] + "." + parts[size-1];
+        }
+    }
+    size_t extensionIndex = email.substr(dash + 1).find(extension);
+    std::cout << "Index: " << extensionIndex << std::endl;
+    dominio = email.substr(dash + 1, extensionIndex - 1);
+    bool valNombre = validarNombre(nombre);
+    bool valDominio = validarDominio(dominio);
+    bool valExtension = validarExtension(extension);
+
+    if (valNombre && valDominio && valExtension)
+        return true;
+    
+    return false;
+}
 
 bool ValidadorEmail::validarNombre (std::string email) {
     std::regex pattern1(NOT_CHARACTERS_ALLOW);
@@ -108,7 +151,7 @@ bool ValidadorEmail::validarExtension(std::string extension) {
 
 int main() {
     ValidadorEmail validadoremail;
-    bool result = validadoremail.validarNombre("test");
+    bool result = true;
     if (result) {
         std::cout << "Pass" << std::endl;
     } else {
