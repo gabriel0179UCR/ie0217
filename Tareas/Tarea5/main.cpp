@@ -13,6 +13,8 @@ std::string POINT_NUMBER = "^([^.]|\\.{2,})+$";
 std::string COUNT_CHARACTERS_DOMAIN = "^[^\\.]+$";
 std::string NOT_CONSECUTIVE_POINTS = "\\.{2,}";
 
+
+
 class ValidadorEmail {
     public:
         //bool validarCorreo(std::string email);
@@ -77,10 +79,31 @@ bool ValidadorEmail::validarDominio(std::string dominio) {
     std::regex pattern5(NOT_CONSECUTIVE_POINTS);
     if (std::regex_match(dominio, pattern5))
         return false;
+    
+    return true;
 }
 
 bool ValidadorEmail::validarExtension(std::string extension) {
-
+    std::regex pattern1(ONLY_LETTERS);
+    std::regex_iterator<std::string::iterator> it(extension.begin(), extension.end(), pattern1);
+    std::regex_iterator<std::string::iterator> end;
+    int contadorPosiciones = 0;
+    while (it != end) {
+        ++contadorPosiciones;
+        ++it;
+    }
+    if (contadorPosiciones >= 2 && contadorPosiciones <= 6 )
+        return false;
+    
+    std::regex pattern2(NOT_STARTFINAL_POINT);
+    if (std::regex_match(extension, pattern2))
+        return false;
+    
+    std::regex pattern3(NOT_CONSECUTIVE_POINTS);
+    if (std::regex_match(extension, pattern3))
+        return false;
+    
+    return true;
 }
 
 int main() {
