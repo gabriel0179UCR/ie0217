@@ -3,7 +3,7 @@
 
 int main() {
     ValidadorEmail validadoremail;
-    bool result = true;
+    bool result = validadoremail.validarCorreo("nomabre@dominiodominio.ext");
     if (result) {
         std::cout << "Pass" << std::endl;
     } else {
