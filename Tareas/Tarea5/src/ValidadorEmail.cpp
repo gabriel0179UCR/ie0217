@@ -115,59 +115,54 @@ bool ValidadorEmail::validarNombre (std::string nombre) {
 
 bool ValidadorEmail::validarDominio(std::string dominio) {
     bool approve = true;
-
+    
+    std::regex pattern1(NOT_LETTERS);
     try {
-        std::regex pattern1(NOT_LETTERS);
-        if (std::regex_match(dominio, pattern1)) {
+        if (std::regex_match(dominio, pattern1)) 
             throw std::invalid_argument(ERROR_DOMAIN+ERROR_INVALID_CHARACTER_DOMAIN);
-        }
     } catch (const std::exception& e) {
         std::cerr << e.what() << std::endl;
         approve = false;
     }
 
+    std::regex pattern2(NOT_STARTFINAL_POINT);
     try {
-        std::regex pattern2(NOT_STARTFINAL_POINT);
-        if (std::regex_match(dominio, pattern2)) {
+        if (std::regex_match(dominio, pattern2))
             throw std::invalid_argument(ERROR_DOMAIN+ERROR_START_END_POINT);
-        }
     } catch (const std::exception& e) {
         std::cerr << e.what() << std::endl;
         approve = false;
     }
 
+    std::regex pattern3(POINT_NUMBER);
     try {
-        std::regex pattern3(POINT_NUMBER);
-        if (std::regex_match(dominio, pattern3)) {
+        if (std::regex_match(dominio, pattern3)) 
             throw std::invalid_argument(ERROR_DOMAIN+ERROR_NO_POINTS);
-        }
     } catch (const std::exception& e) {
         std::cerr << e.what() << std::endl;
         approve = false;
     }
 
+    std::regex pattern4(COUNT_CHARACTERS_DOMAIN);
+    std::regex_iterator<std::string::iterator> it(dominio.begin(), dominio.end(), pattern4);
+    std::regex_iterator<std::string::iterator> end;
+    int contadorPosiciones = 0;
+    while (it != end) {
+        ++contadorPosiciones;
+        ++it;
+    }
     try {
-        std::regex pattern4(COUNT_CHARACTERS_DOMAIN);
-        std::regex_iterator<std::string::iterator> it(dominio.begin(), dominio.end(), pattern4);
-        std::regex_iterator<std::string::iterator> end;
-        int contadorPosiciones = 0;
-        while (it != end) {
-            ++contadorPosiciones;
-            ++it;
-        }
-        if (contadorPosiciones >= 3 && contadorPosiciones <= 30) {
+        if (contadorPosiciones >= 3 && contadorPosiciones <= 30)
             throw std::invalid_argument(ERROR_DOMAIN+ERROR_MAX_CHARACTER_DOMAIN);
-        }
     } catch (const std::exception& e) {
         std::cerr << e.what() << std::endl;
         approve = false;
     }
 
+    std::regex pattern5(NOT_CONSECUTIVE_POINTS);
     try {
-        std::regex pattern5(NOT_CONSECUTIVE_POINTS);
-        if (std::regex_match(dominio, pattern5)) {
+        if (std::regex_match(dominio, pattern5))
             throw std::invalid_argument(ERROR_DOMAIN+ERROR_CONSECUTIVE_CHARACTERS_DOMAIN_EXTENSION);
-        }
     } catch (const std::exception& e) {
         std::cerr << e.what() << std::endl;
         approve = false;
@@ -178,15 +173,16 @@ bool ValidadorEmail::validarDominio(std::string dominio) {
 
 bool ValidadorEmail::validarExtension(std::string extension) {
     bool approve = true;
+
+    std::regex pattern1(NOT_LETTERS);
+    std::regex_iterator<std::string::iterator> it(extension.begin(), extension.end(), pattern1);
+    std::regex_iterator<std::string::iterator> end;
+    int contadorPosiciones = 0;
+    while (it != end) {
+        ++contadorPosiciones;
+        ++it;
+    }
     try {
-        std::regex pattern1(NOT_LETTERS);
-        std::regex_iterator<std::string::iterator> it(extension.begin(), extension.end(), pattern1);
-        std::regex_iterator<std::string::iterator> end;
-        int contadorPosiciones = 0;
-        while (it != end) {
-            ++contadorPosiciones;
-            ++it;
-        }
         if (contadorPosiciones >= 2 && contadorPosiciones <= 6 )
             throw std::invalid_argument(ERROR_EXTENSION+ERROR_MAX_CHARACTER_EXTENSION);
     } catch (const std::exception& e) {
@@ -194,8 +190,8 @@ bool ValidadorEmail::validarExtension(std::string extension) {
         approve = false;
     }
 
+    std::regex pattern2(NOT_STARTFINAL_POINT);
     try {
-        std::regex pattern2(NOT_STARTFINAL_POINT);
         if (std::regex_match(extension, pattern2))
             throw std::invalid_argument(ERROR_EXTENSION+ERROR_START_END_POINT);
     } catch (const std::exception& e) {
@@ -203,8 +199,8 @@ bool ValidadorEmail::validarExtension(std::string extension) {
         approve = false;
     }
 
-    try {
     std::regex pattern3(NOT_CONSECUTIVE_POINTS);
+    try {
     if (std::regex_match(extension, pattern3))
         throw std::invalid_argument(ERROR_EXTENSION+ERROR_CONSECUTIVE_CHARACTERS_DOMAIN_EXTENSION);
     } catch (const std::exception& e) {
