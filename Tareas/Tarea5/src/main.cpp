@@ -3,6 +3,7 @@
 #include <string>
 using namespace std;
 
+// Opciones del menu
 enum Opciones {
     INGRESAR = 1,
     SALIR = 2,
@@ -14,6 +15,7 @@ int main() {
     int opcion = 0;
     string email;
     bool exit = false;
+
     // Menu de opciones
     while(!exit){
         cout << endl << "///// Validacion de correo /////" << endl;

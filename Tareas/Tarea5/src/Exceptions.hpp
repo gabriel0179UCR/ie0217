@@ -4,6 +4,7 @@
 #include <string>
 using namespace std;
 
+//! Mensajes de error para el manejo de excepciones
 const string ERROR_EMAIL = "ERROR -> Email: ";
 const string ERROR_NAME = "ERROR -> Nombre: ";
 const string ERROR_DOMAIN = "ERROR -> Dominio: ";
