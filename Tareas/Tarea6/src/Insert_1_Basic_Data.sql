@@ -1,3 +1,4 @@
+-- Insertando informacion basica de los cursos a la tabla Cursos
 INSERT INTO Cursos(Sigla, Nombre, Semestre, Creditos)
 VALUES
     ('IE-0579','Administración de sistemas',1,4),
@@ -76,6 +77,7 @@ VALUES
     ('IE-1115','Temas especiales II en telecomunicaciones',NULL,3),
     ('IE-1116','Temas especiales II en electrónica',NULL,3);
 
+-- Insertando cursos de bachillerato que son requisitos de cursos optativos
 INSERT INTO Cursos(Sigla, Nombre, Semestre, Creditos)
 VALUES
     ('IE-0247','Señales y Sistemas I',-1,3),
@@ -95,7 +97,7 @@ VALUES
     ('IE-0615','Máquinas Eléctricas II',-1,4),
     ('IE-0616','Laboratorio de Máquinas Eléctricas II',-1,1);
 
-
+-- Insertando los requisitos entre cursos
 INSERT INTO Requisitos(CursoID, RequisitoCursoID)
 VALUES
     ((SELECT CursoID FROM Cursos WHERE Sigla = 'IE-0579'),(SELECT CursoID FROM Cursos WHERE Sigla = 'IE-0479')),
