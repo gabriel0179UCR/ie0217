@@ -14,4 +14,4 @@ VALUES
 INSERT INTO Descripciones(CursoID, Descripcion, Dificultad)
 VALUES
     ((SELECT CursoID FROM Cursos WHERE Sigla = 'IE-9999'), 'Se desarrolla y estudia la arquitectura del desarrollo de inteligencias artificiales y como realizar Fine Tunning de los mismos.', 'Medio'),
-    ((SELECT CursoID FROM Cursos WHERE Sigla = 'IE-9998'), 'Se desarrolla aplicaciones e interfacez web mediante el uso de frameworks como REACT', 'Medio');
+    ((SELECT CursoID FROM Cursos WHERE Sigla = 'IE-9998'), 'Se desarrolla aplicaciones e interfaces web mediante el uso de frameworks como REACT', 'Medio');
