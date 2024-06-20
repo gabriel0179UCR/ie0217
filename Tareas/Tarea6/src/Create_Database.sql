@@ -6,7 +6,7 @@ USE Tarea6;
 CREATE TABLE Cursos (
 	CursoID INT PRIMARY KEY AUTO_INCREMENT, 
     Sigla VARCHAR(10) UNIQUE KEY, -- Clave candidata
-    Nombre VARCHAR(50) UNIQUE KEY, -- Clave candidata
+    Nombre VARCHAR(100) UNIQUE KEY, -- Clave candidata
     Semestre VARCHAR(10),
     Creditos INT
 );
@@ -18,6 +18,7 @@ CREATE TABLE Requisitos (
     RequisitoCursoID INT, -- Clave foranea
     FOREIGN KEY (CursoID) REFERENCES Cursos(CursoID), 
     FOREIGN KEY (RequisitoCursoID) REFERENCES Cursos(CursoID)
+    ON DELETE CASCADE
 );
 
 -- Creando tabla Descripciones
@@ -27,4 +28,5 @@ CREATE TABLE Descripciones (
     Descripcion VARCHAR(10000),
     Dificultad ENUM('Fácil', 'Medio', 'Difícil'),
     FOREIGN KEY (CursoID) REFERENCES Cursos(CursoID)
+    ON DELETE CASCADE
 );
